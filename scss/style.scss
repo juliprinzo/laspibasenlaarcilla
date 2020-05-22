@@ -1,9 +1,9 @@
  /*colores*/
-$gris: #a09c9b;
+$gris: #948f8d;
 $neutro: #eeece8;
 $rosa: #fcdbd7;
 $coral: #f69380;
-$azul: #6d8394;
+$azul: #63798a;
 
 $font-size: 50px;
 $almendra: 'almendra', serif;
@@ -15,16 +15,8 @@ h1{
 	letter-spacing: 0.5px;
 }
 
-@media only screen and (max-width: 600px) {
-    h1{
-        font-size: ($font-size)-15px; 
-    }
-    p{
-        font-size: ($font-size)-35px; 
-    }
-}
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width:601px) and (max-width:1025px) {
     h1{
         font-size: ($font-size)-15px; 
     }
@@ -79,6 +71,14 @@ $colors: "coral" $coral, "rosa" $rosa, "azul" $azul, "blanco" $neutro;
 	line-height: 90%;
 	margin:0;
 	padding: 0;
+ }
+
+ @mixin dot {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10%;
  }
 
  .titulo-almendra-coral{
@@ -332,50 +332,148 @@ $subtitulos: "rosa" $rosa , "azul" $azul, "coral" $coral;
 
  /****************MENU**************/
 
-#nav-menu{
-    position: relative;
+  /*** menu boostrap***/
+
+#contenedor-header{
     width: 100%;
-    button{
-        position: absolute;
-        z-index: 1;
+    position:relative;
+}
+.navbar{
+    position: absolute;
+    width: 100%;
+}
+
+.rosa{
+    background-color: $rosa;
+}
+
+.neutro{
+    background-color: $neutro;
+}
+
+.navbar-collapse {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+#navbarNav{
+    width: auto;
+    justify-content: center;
+    right: 50%;
+    left: 50%;
+}
+
+.navbar-brand{
+    display: none;
+}
+a.nav-link{
+    padding:0rem 0rem 0rem 0rem;
+    img{ 
+        width: 260px;
+        }
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0rem;
+    padding-left: 0rem;
+}
+
+.nav-item{
+    margin-top: 2%;
+    font-family: $open;
+    color: $coral;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $coral;
+    font-size: 100%;
+   letter-spacing: 1px;
+    transition: color 0.2s ease-in-out;
+    &:hover {color:$azul;}
+}
+.navbar-collapse{
+    top:5px;
+}
+
+.navbar-nav{
+    margin-top: 1%;
+    width: 85%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-family: $open;
+    color: $coral;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 100%;
+   letter-spacing: 1px;
+    transition: color 0.2s ease-in-out;
+    &:hover {color:$azul;}
+}
+
+.navbar-light .navbar-text a:hover, .navbar-light .navbar-text a:focus {
+    color: $azul;
+  }
+
+.navbar-toggler{
+    border:none;
+    outline:none;
+}
+
+.current-page{
+	font-family: 'open-sans', sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	color:#6d8394;
+	font-size: 100%;
+    letter-spacing: 1px;
+}
+
+.current-page:hover{color:#6d8394;}
+
+@media only screen and (max-width: 992px){
+    .navbar-brand{
+        display: inline-block;
+        width: 240px;
+        margin:1% 0% 0% 1%;
     }
-    #menu-header{
-        width: 100%;
-        position: absolute;
-        z-index: 1;
-        top:0px;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-        align-items: center;
-        padding: 2% 0% 2% 0%;
-        a img{
-            width: 90%;
+    .li-brand{
+        display: none;
+    }
+    .nav-link{
+        padding:0rem 0rem 0rem 0rem;
+    img{
+        display:none;
         }
-        .page{
-            font-family: $open;
-            font-weight: bold;
-            text-transform: uppercase;
-            text-decoration: none;
-            color: $coral;
-            font-size: 100%;
-            letter-spacing: 1px;
-            transition: color 0.2s ease-in-out;
-            &:hover {color:$azul;}
-        }
-        .current-page{
-            font-family: $open;
-            font-weight: bold;
-            text-transform: uppercase;
-            text-decoration: none;
-            color:$azul;
-            font-size: 100%;
-            letter-spacing: 1px;
-            &:hover{color:$azul;}
+    }
+
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 0rem;
+        padding-left: 0rem;
+    }
+
+    .navbar-toggler{
+        .navbar-toggler-icon{
+            margin-right: 3%;
+            }
+    }
+
+    .navbar-collapse {
+        top: 5px;
+        text-align: right;
+        margin-right: 3%;
+        .navbar-nav {
+            width: 100%;
         }
     }
 }
-
 
 
  /****************ESTILOS-HOME***************/
@@ -509,14 +607,10 @@ $subtitulos: "rosa" $rosa , "azul" $azul, "coral" $coral;
         text-align: center;
     }
     article{
-        margin-top: 3%;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
+        margin-top: 5%;
         div{
             background-color: $rosa;
             padding: 25px;
-            width: 275px;
             border-radius: 0.3em;
             img{
                 width: 100%;
@@ -531,7 +625,7 @@ $subtitulos: "rosa" $rosa , "azul" $azul, "coral" $coral;
                 line-height: 130%;
                 margin-bottom: 5%;
                 margin-top: 3%;
-                height: 90px;
+                
             }
             a{
                 width: auto;
@@ -585,204 +679,7 @@ $subtitulos: "rosa" $rosa , "azul" $azul, "coral" $coral;
  }
 
 
- @media only screen and (max-width: 600px) {
-    .fondo-rosa-inicio {
-        justify-content: center;
-        flex-flow: row wrap;
-        align-items: flex-start;
-        height: 600px;
-        width: 100%;
-    }
-    .index-foto{
-        position: relative;
-        #izquierda-1{
-            transform: rotate(-15deg)translateX(-200px) scale(0.7);
-            position: absolute;
-            top: -10px;
-        }
-        
-        #izquierda-2{
-            transform: rotate(15deg) translateX(0px) scale(0.7);
-            margin-left: 0px;
-            margin-top: 40px;
-        }
-        
-        #derecha-1{
-            display: none;
-        }
-        
-        #derecha-2{
-            display: none;
-        }
-    }
-    .texto-bienvenida{
-        margin-top:300px;
-        margin-right: 20px;
-        text-align: left;
-        h1{
-            font-size: 180%;
-        }
-        p{
-            text-align: left; 
-        }
-    }
 
-    .nacimiento {
-        padding: 5% 10% 5% 10%;
-        display: grid;
-        grid-template-columns:1fr;
-        grid-row: repeat (4, 1fr);
-        grid-template-areas: 
-        'titulo'
-        'ilustracion'
-        'ilustracion'
-        'caja';
-        img{
-            grid-area: ilustracion;
-            width: 30%;
-        }
-    }
-    .titulo-nacimiento{
-        grid-area: titulo;}
-
-    .cajon-nacimiento{
-        grid-area: caja;
-        padding: 8% 8% 4% 8%;
-        .razon-nacimiento{
-            margin-bottom: 5%;
-        }
-    }
-
-    .quienes-somos{
-        padding: 15% 10% 15% 10%;
-        article{
-            justify-content: center;
-            div{
-                margin-top: 5%;
-            }        
-        }   
-    }
-
-    .hacer-ceramica{
-        padding: 15% 10% 15% 10%;
-        div{
-            align-content: center;
-            article{
-                width: 200px;
-                padding: 3%;
-                margin-bottom: 10px;
-                p{
-                    line-height: 140%;
-                    letter-spacing: 0;
-                }
-                img{
-                    width: 100px;
-                    padding-bottom: 5%;
-                }
-            }
-         }
-         a{
-             margin-top: 20px;
-         }
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .fondo-rosa-inicio {
-        flex-flow: row nowrap;
-        height: 400px;
-    }
-    .index-foto{
-        position: relative;
-        #izquierda-1{
-            transform: rotate(-15deg) scale(0.6);
-            position: absolute;
-            top: 30px;
-            z-index: 1;
-        }
-        
-        #izquierda-2{
-            transform: rotate(15deg) translateX(15px) scale(0.6);
-            margin-top: 150px;
-        }
-        
-        #derecha-1{
-            transform: rotate(15deg) scale(0.6);
-            position: absolute;
-            top: 30px;
-            z-index: 1;
-        }
-        
-        #derecha-2{
-            transform: rotate(-15deg) translateX(-15px) scale(0.6);
-            margin-top: 150px;
-        }
-    }    
-    .texto-bienvenida{
-        margin-top:0%;
-        width: 500px;
-        align-self:center;
-        padding: 2%;
-    }
-
-    .nacimiento {
-        padding: 15% 10% 15% 10%;
-        display: grid;
-        grid-template-columns:1fr;
-        grid-row: repeat (4, 1fr);
-        grid-template-areas: 
-        'titulo'
-        'ilustracion'
-        'ilustracion'
-        'caja';
-        img{
-            grid-area: ilustracion;
-            width: 80%;
-        }
-    }
-    .titulo-nacimiento{
-        grid-area: titulo;}
-    .cajon-nacimiento{
-        grid-area: caja;
-        padding: 8% 8% 4% 8%;
-        .razon-nacimiento{
-            margin-bottom: 5%;
-        }
-    }
-
-    .quienes-somos{
-        padding: 10% 10% 10% 10%;
-        article{
-            justify-content: center;
-            div{
-                margin-top: 5%;
-            }        
-        }   
-    }
-
-    .hacer-ceramica{
-        padding: 15% 10% 15% 10%;
-        div{
-            align-content: center;
-            article{
-                width: 200px;
-                padding: 3%;
-                margin-bottom: 10px;
-                p{
-                    line-height: 140%;
-                    letter-spacing: 0;
-                }
-                img{
-                    width: 100px;
-                    padding-bottom: 5%;
-                }
-            }
-         }
-         a{
-             margin-top: 20px;
-         }
-    }
-}
 
  /****************ESTILOS-SHOP***************/
 
@@ -807,10 +704,27 @@ $subtitulos: "rosa" $rosa , "azul" $azul, "coral" $coral;
             background-color: $coral;
             padding: 10% 0% 10% 10%;
         }
+        #favoritos{
+            border: solid 2px $coral;
+            color: $coral;
+            font-family: $open;
+            text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 1px;
+            padding: 4% 6% 4% 6%;
+            border-radius: 0.4em;
+            font-size: 90%;
+            width: 80%;
+            margin-bottom: 7%;
+            img{
+                margin-right: 5%;
+                width: 10%;
+            }
+        }
         #caja-sintitulo{
-            padding: 10%;
+            padding: 10% 10% 15% 10%;
             #shop-parrafo{
-                margin-bottom: 10%;
+                margin-bottom: 5%;
             }
             #shop-cuotas{
                 font-family: $open;
@@ -819,7 +733,7 @@ $subtitulos: "rosa" $rosa , "azul" $azul, "coral" $coral;
                 text-transform: uppercase;
                 color: $coral;
                 margin-top: 8%;
-                margin-bottom: 10%;
+                margin-bottom: 5%;
                 ul{
                     list-style-image: url(../img/shop/tick.png);
                     margin-left: 8%;
@@ -831,18 +745,32 @@ $subtitulos: "rosa" $rosa , "azul" $azul, "coral" $coral;
 
 
 #shop-filtros{ 
-    p{
+    margin-top: 8%;
+    h2{
+        margin-top: 10%;
+        color: $azul;
+        font-family: $almendra;
+        font-size: ($font-size/2)-4;
+        width: 100%;
+        text-decoration: underline;
+        img{
+            width: 20px;
+            float: right;
+        }
+    }
+    a{
         color: $azul;
         text-transform: uppercase;
         font-size: 80%;
         font-family: $open;
         font-weight: bold;
-        margin-bottom: 3%;
+        margin-bottom: 5%;
     }
     ul{
         color:$gris;
         line-height: 120%;
-        margin-bottom: 5%;
+        margin-bottom: 2%;
+        margin-top: 3%;
         .badge-pill {
             padding: 0.3em 0.8em 0.3em 0.8em;
             border: 1px solid #ada9a8;
@@ -862,9 +790,39 @@ $subtitulos: "rosa" $rosa , "azul" $azul, "coral" $coral;
                 background-color: $gris;
               }
           }
+          
     }
 }
-
+#filtro4{
+    .badge-pill {  
+        padding: 0.9em 0.8em 0.9em 0.8em; 
+        width: 40%; 
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: flex-start;
+  .dot-rosa{
+      background-color: $rosa;
+      @include dot;
+  }
+  .dot-coral{
+    background-color:$coral;
+    @include dot;
+}
+.dot-celeste{
+    background-color: rgb(116, 185, 212);
+    @include dot;
+}
+.dot-blanco{
+    background-color: rgb(255, 255, 255);
+    @include dot;
+}
+.dot-negro{
+    background-color: rgb(0, 0, 0);
+    @include dot;
+}
+}
+}
 
  /*PRODUCTOS*/
 
@@ -985,11 +943,12 @@ $subtitulos: "rosa" $rosa , "azul" $azul, "coral" $coral;
 #talleres-inicio{
 	margin-top: 5%;
 	display: flex;
-	flex-flow: row nowrap;
+	flex-flow: row wrap;
 	align-items: baseline;
     justify-content: space-around;
     div{
         width: 380px;
+        margin-bottom: 10px;
         padding: 4% 0% 4% 0%;
         background-color: $neutro;
         border-radius: 0.3rem;
@@ -1034,26 +993,25 @@ $subtitulos: "rosa" $rosa , "azul" $azul, "coral" $coral;
 
  #talleres-disponibles{
 	background-color: $neutro;
-	padding: 12% 20% 5% 20%;
+    padding: 12% 20% 5% 20%;
+    .container{
+        margin-bottom: 4%;
+        .anuales{
+            .container{
+                padding: 0;
+                margin-bottom: 0;
+            }
+        }
+        .row{
+            width: 100%;
+        }
+    }
 }
 
 .talleres-ilus{
-	width: 45%;
+	width: 50%;
 	margin-bottom: 4%;
 }
-
-
-#grid-talleres{
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	justify-content: space-between;
-	grid-template-rows: 1fr 1fr;
-	grid-template-areas: 
-	'anuales opcion-anuales'
-	'workshops opcion-workshops'
-
-}
-
 
 .titulo-talleres-caja{
 	font-family: $open;
@@ -1073,24 +1031,21 @@ $subtitulos: "rosa" $rosa , "azul" $azul, "coral" $coral;
 	list-style-image: url('../img/talleres/tick.png');
 }
 
+
+
  /*TALLERES-anuales*/
 
-#anuales{
-	grid-area: anuales;
-	width: 280px;
-}
 
-#opcion-anuales{
-	grid-area: opcion-anuales;
-	display: flex;
-	flex-flow: row nowrap;
-    justify-content: center;
-    a{
-        background-color: $rosa;
-         margin-right: 5%;
-         box-shadow: 5px 5px 20px 5px #e5e1dc;
-         border-radius: 0.3rem;
+.opcion-anuales{
+    background-color: $rosa;
+    box-shadow: 3px 3px 10px 2px #e0dcd7;
+    border-radius: 0.3rem;
+    padding: 0;
+    width: 100%;
+    img{
+    width: 100%;
     }
+
     p{
         padding-top: 1%;
         padding-bottom: 7%;
@@ -1102,7 +1057,6 @@ $subtitulos: "rosa" $rosa , "azul" $azul, "coral" $coral;
         padding: 8%;
     }
 }
-
 
 .hvr-grow {
 	display: inline-block;
@@ -1117,6 +1071,7 @@ $subtitulos: "rosa" $rosa , "azul" $azul, "coral" $coral;
     &:hover, &:focus, &:active {
         -webkit-transform: scale(1.05);
         transform: scale(1.05);
+        box-shadow: 4px 4px 8px 2px #47474613;
       }
   }
 
@@ -1124,50 +1079,31 @@ $subtitulos: "rosa" $rosa , "azul" $azul, "coral" $coral;
 
  /*TALLERES-workshops*/
 
-
-#workshops{
-	grid-area: workshops;
-	padding-right: 15%;
-	margin-top: 8%;
-}
-
-#opcion-workshops{
-	grid-area: opcion-workshops;
-	display: flex;
-	flex-flow: row nowrap;
-    justify-content: center;
-    margin-top: 8%;
-    a{
-        margin-right: 5%;
-    }
-}
-
-
 .p-talleres{
 	padding-bottom: 5%;
     padding-top: 5%;
-    width: 260px;
 }
 
 .workshop-1{
 	position: relative;
     border-radius: 0.3rem;
-    img{  
-	width: 250px;
-    height: 250px;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    img{   
     object-fit: cover;
     display: block;
-	box-shadow: 5px 5px 20px 5px #e5e1dc;
+    width: 275px;
+	box-shadow: 3px 3px 10px 2px #e0dcd7;
 	border-radius: 0.3rem;
     }
     div{
         position: absolute;
+        width: 275px;
         top:0;
         bottom: 0;
         right: 0;
-        left: 0;
-        height: 250px;
-        width: 250px;
+        left: 0;  
         opacity: 0;
         background-color: $coral;
         transition: opacity .5s ease;
@@ -1201,14 +1137,53 @@ $subtitulos: "rosa" $rosa , "azul" $azul, "coral" $coral;
 }
 
 
+@media only screen and (min-width:601px) and (max-width:1024px){
+   
+
+}
+
+
 
  /*TALLERES-expo*/
 
 
-#workshops-expo{
+#workshops-expo2020{
 	padding: 10% 20% 10% 20%;
-	background-color:$azul;
+    background-color:$azul;
 }
+
+
+@media only screen and (min-width:601px) and (max-width:1023px){
+    #talleres-inicio{
+        flex-flow: row nowrap;
+        div{
+            margin-right: 10px;}
+        }
+    #workshops-expo2020{
+        padding: 12% 5% 5% 5%;
+        background-color:$azul;
+    }
+    .taller-expo-img{
+        display:none;
+    }
+    .talleres-ilus{
+        width: 100%;
+        margin-bottom: 0%;
+    }
+}
+
+@media only screen and (min-width:1024px) and (max-width:1199.98px){
+    #workshops-expo2020{
+        padding: 12% 5% 5% 5%;
+        background-color:$azul;
+    }
+    .talleres-ilus{
+        width: 70%;
+        margin-bottom: 2%;
+    }
+}
+
+
 
 .dot {
   height: 10px;
@@ -1220,7 +1195,7 @@ $subtitulos: "rosa" $rosa , "azul" $azul, "coral" $coral;
 
 #titulo-expo2020{
 	display: flex;
-	flex-flow: row nowrap;
+	flex-flow: row wrap;
 	justify-content: space-between;
 	align-items: center;
     margin-bottom: 5%;
@@ -1265,17 +1240,20 @@ $subtitulos: "rosa" $rosa , "azul" $azul, "coral" $coral;
          font-size: 70%;
          padding: 6px 12px 6px 12px;
      }
+     div{
+         section{
+             width: 100%;
+         }
+     }
 }
 
 .taller-expo{
 	display: flex;
-	flex-flow: row nowrap;
-	width: 595px;
     margin-bottom: 2%;
+    padding: 0;
 }
-
 .taller-expo-chico{
-	width: 250px;
+    padding: 0;
 }
 
 .taller-div{
@@ -1291,8 +1269,7 @@ $subtitulos: "rosa" $rosa , "azul" $azul, "coral" $coral;
         font-size: 180%;
         margin: 0;
         line-height: 100%;
-    }
-    
+    } 
 }
 
 .taller-div-height{
@@ -1322,8 +1299,7 @@ $subtitulos: "rosa" $rosa , "azul" $azul, "coral" $coral;
 }
 
 .taller-expo-img{
-    width: 200px;
-    height: 100%;
+    height: 250px;
 }
 
 .destacado-almendra{
@@ -1393,6 +1369,7 @@ $subtitulos: "rosa" $rosa , "azul" $azul, "coral" $coral;
         margin-bottom: 4%;
         text-align: center;
     }
+
     #expo2020-encontrar{
         display: flex;
         flex-flow: row nowrap;
@@ -1421,18 +1398,17 @@ $subtitulos: "rosa" $rosa , "azul" $azul, "coral" $coral;
 #expositoras-back{
 	padding: 10% 20% 10% 20%;
 	background-color: $azul;
-	text-align: center;
+    text-align: center;
+    h1{
+        color: $rosa;
+        margin-bottom: 1%;
+    }
+    p{
+        color: $neutro;
+        margin-bottom: 5%;
+    }
 }
 
-#expositoras-back h1{
-	color: $rosa;
-	margin-bottom: 1%;
-}
-
-#expositoras-back p{
-	color: $neutro;
-	margin-bottom: 5%;
-}
 
 
 #exponen{
@@ -1515,24 +1491,20 @@ $subtitulos: "rosa" $rosa , "azul" $azul, "coral" $coral;
 .expone-overlay-texto{
 	margin-top: 40%;
 	margin-bottom: 50%;
-	padding: 0% 10% 0% 10%;
+    padding: 0% 10% 0% 10%;
+    h2{
+        font-family: 'almendra', serif;
+        color:$rosa;
+        font-size: 180%;
+    }
+    img{
+        width: 10%;
+    }
+    p{
+        color: $neutro;
+        margin-bottom: 5%;
+    }
 }
-
-.expone-overlay-texto h2{
-	font-family: 'almendra', serif;
-	color:$rosa;
-	font-size: 180%;
-}
-
-.expone-overlay-texto img{
-	width: 10%;
-}
-
-.expone-overlay-texto p{
-	color: $neutro;
-	margin-bottom: 5%;
-}
-
 
 
  /*EXPOSICIONES-agenda*/
@@ -1550,17 +1522,16 @@ $subtitulos: "rosa" $rosa , "azul" $azul, "coral" $coral;
 	justify-content: space-around;
 	margin-bottom: 5%;
     text-align: center;
-}
-
-#agenda-titulo p{
-	width: 150px;
-	font-family: $open;
-	color: $coral;
-	text-transform: uppercase;
-	font-weight: bold;
-	font-size: 80%;
-	line-height: 120%;
-	letter-spacing: 1px;
+    p{
+        width: 150px;
+        font-family: $open;
+        color: $coral;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 80%;
+        line-height: 120%;
+        letter-spacing: 1px;
+    }
 }
 
 #agenda-flex {
@@ -1583,12 +1554,11 @@ $subtitulos: "rosa" $rosa , "azul" $azul, "coral" $coral;
 	flex-flow: row wrap;
 	justify-content: flex-start;
     align-items: center;
-}
-
-.agenda-dia img{
-	width: 8%;
-    margin-left: 4%;
-    transform: rotate(90deg);
+    img{
+        width: 8%;
+        margin-left: 4%;
+        transform: rotate(90deg);
+    }
 }
 
 .dia-horario{
@@ -1653,9 +1623,6 @@ $subtitulos: "rosa" $rosa , "azul" $azul, "coral" $coral;
 	color:$coral;
 	margin-bottom: 1%;
 }
-
-
-
 
 
  /*EXPOSICIONES-entradas*/
@@ -1723,7 +1690,8 @@ $subtitulos: "rosa" $rosa , "azul" $azul, "coral" $coral;
 
 #contacto{
 	padding: 10% 15% 10% 15%;
-    background-color:$neutro ;
+    background-color:$neutro;
+    height: 100%;
     #contacto-flex{
         margin-top: 10%;
         display: flex;
@@ -1833,6 +1801,7 @@ textarea.form-control{
 	background-color: $azul;
     border-color: $azul;
     border-radius: 2em;
+    padding: 1.5% 3% 1.5% 3%;
     &:hover {
         color: $neutro;
         background-color: $coral;
@@ -1871,7 +1840,7 @@ footer {
 .titulo-almendra-gris{
 	font-family: 'almendra', serif;
 	font-weight: bold;
-	font-size: 100%;
+	font-size: 110%;
 	text-decoration: none;
 	color: #cccac8;
 	letter-spacing: 2px;
@@ -1882,7 +1851,7 @@ footer {
 	font-family: $open;
 	font-weight: normal;
 	line-height: 130%;
-	font-size: 80%;
+	font-size: 90%;
 	letter-spacing: 1px;
 	color:#726d6d;
 }
@@ -1903,12 +1872,1012 @@ footer {
 	text-align: center;
 }
 
-@media only screen and (max-width: 600px) {
+ /****************404***************/
+
+ #fondo-404{
+     background-color: $rosa;
+     padding: 8% 20% 10% 20%;
+     h2{
+         color: $coral;
+         font-family: $almendra;
+         text-align: center;
+         font-size: ($font-size)-10px;
+         margin-bottom: 25px;
+     }
+     img{
+         margin-top: 5%;
+         width: 100%;
+         margin-bottom: 45px;
+     }
+     .contenido-404{
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+        div{
+            width: 350px;
+            text-align: center;
+            margin-right: 1%;
+            .subtitulo-404{
+                color: $coral;
+                font-family: $open;
+                font-weight: bold;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                text-align: center;
+                font-size: 95%;
+                margin-bottom: 2%;
+             }
+            p{
+                margin-bottom: 5%;
+                line-height: 135%;
+            }
+            .boton-coral{
+                @include boton;
+                 background-color: $coral;
+                 &:hover {
+                    color: $coral;
+                    border: 2px solid $coral;
+                    text-decoration: none;
+                    background-color:transparent;
+                  }
+             }
+        }
+    }
+ }
+
+
+
+ /****************MEDIA-QUERIES***************/
+
+
+  @media only screen and (max-width: 600px){
+    h1{
+        font-size: ($font-size)-15px; 
+    }
+    p{
+        font-size: ($font-size)-35px; 
+    }
+
+    .navbar{
+        position: static;
+        width: 100%;
+    }
+
+    .fondo-rosa-inicio {
+        justify-content: center;
+        flex-flow: row wrap;
+        align-items: center;
+        align-content: center;
+        height: 500px;
+        width: 100%;
+    }
+    .index-foto{
+        position: relative;
+        #izquierda-1{
+            transform: rotate(-15deg)translateX(-60px) scale(0.7);
+            position: absolute;
+            top: 0px;
+        }
+        
+        #izquierda-2{
+            transform: rotate(15deg) translateX(40px) scale(0.7);
+            margin-left: 20px;
+            margin-top: 0px;
+        }
+        
+        #derecha-1{
+            display: none;
+        }
+        
+        #derecha-2{
+            display: none;
+        }
+    }
+    .texto-bienvenida{
+        margin-top:0px;
+        h1{
+            font-size: 180%;
+        }
+        a{
+            margin-bottom: 50px;
+        }
+    }
+
+    .nacimiento {
+        padding: 15% 10% 15% 10%;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        grid-template-columns:1fr;
+        grid-row: repeat (4, 1fr);
+        grid-template-areas: 
+        'titulo'
+        'ilustracion'
+        'ilustracion'
+        'caja';
+        img{
+            grid-area: ilustracion;
+            width: 80%;
+            margin: auto;
+        }
+    }
+    .titulo-nacimiento{
+        grid-area: titulo;
+        text-align: center;
+        h1{
+        width: 100%;
+        }
+    }    
+    .cajon-nacimiento{
+        grid-area: caja;
+        padding: 8% 8% 4% 8%;
+        .razon-nacimiento{
+            margin-bottom: 5%;
+        }
+    }
+
+    .quienes-somos{
+        padding: 15% 8% 15% 8%;
+        article{
+            padding: 0% 8% 0% 8%;
+            justify-content: center;
+            div{
+                margin-top: 5%;
+            }        
+        }   
+    }
+    .hacer-ceramica{
+        padding: 15% 5% 15% 5%;
+        div{
+            justify-content: center;
+            article{
+                width: 300px;
+                padding: 3%;
+                margin-bottom: 10px;
+                p{
+                    line-height: 140%;
+                    letter-spacing: 0;
+                }
+                img{
+                    width: 100px;
+                    padding-bottom: 5%;
+                }
+            }
+         }
+         a{
+             margin-top: 20px;
+         }
+    }
+    .fondo-rosa{
+        padding: 20% 10% 20% 10%;
+    }
+    #workshops-expo{
+        padding: 0% 0% 0% 0%;
+    }
+    #talleres-disponibles{
+        padding: 20% 8% 20% 8%;
+        article.anuales{
+            margin-top: 8%;
+        }
+    }
+    #workshops-expo2020{
+        padding: 20% 8% 20% 8%;
+        background-color:$azul;
+        #titulo-expo2020{
+            margin-bottom: 10%;
+            justify-content: center;
+            img{
+                margin: 5% 0% 8% 0%;
+            }
+            span{
+                display: none;
+            }
+        }
+        #expo-talleres{
+            margin-top: 10%;
+            justify-content: center;
+        }
+    }
+    .taller-expo-img{
+        display:none;
+    }
+    .taller-div{
+        height: 100%;
+    }
+
+    .taller-div-height{
+        height: auto;
+        margin-bottom: 2%;
+    }
+
+    .fondo-rosa-expo{
+        padding:15% 8% 15% 8%;
+        background-size: cover;
+        text-align: center;
+        height: 550px;
+        #expo-titulo-head {
+            text-shadow: 0px 0px 20px rgb(243, 239, 239);
+            margin-top: 30%;
+            p{
+            margin-top: 2%;
+            margin-bottom: 3%;
+            }
+        }
+        a{
+            margin-bottom: 50%; 
+        }
+     }
+
+    .fondo-claro{
+    padding: 20% 8% 20% 8%;
+        h1{
+            margin-bottom: 5%;
+        }
+        .parrafo-exposicion{
+            font-size: 100%;
+            margin-bottom: 10%;
+        }
+        #expo2020-encontrar{
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            article{
+                width: 50%;
+                text-align: center;
+                margin-bottom: 10%;
+                img{
+                    width: 40%;
+                    }
+                }
+            }
+    }
+
+    #expositoras-back{
+        padding: 20% 8% 20% 8%;
+    }
+
+    #exponen{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6,1fr);
+        justify-content: space-between;
+        grid-row-gap: 10px;
+        grid-template-areas: 
+        'expone-artista1' 
+        'expone-artista2' 
+        'expone-artista3'
+        'expone-artista4' 
+        'expone-especial'
+        'expone-especial';
+    }
+    
+    #expone-artista1{
+        grid-area: expone-artista1;
+    }
+    
+    .expone-overlay-texto{
+        margin-top: 50%;
+        margin-bottom: 50%;
+        p{
+            font-size: 130%;
+        }
+    }
+    
+    #expone-artista2{
+        grid-area: expone-artista2;
+    }
+    
+    #expone-artista3{
+        grid-area: expone-artista3;
+    }
+    
+    #expone-artista4{
+        grid-area: expone-artista4;
+    }
+    
+    #expone-especial{
+        grid-area: expone-especial;
+    }
+
+    #agenda-2020{
+        padding: 20% 8% 10% 8%;
+    }
+    
+    #agenda-titulo{
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10%;
+        p{
+            width: 100%;
+            font-size: 90%;
+        }
+        h1{
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+    }
+    .agenda-dia{
+        margin: 15px 0px 15px 0px;
+        padding: 5%;
+        img{
+            width: 20%;
+            margin-left: 2%;
+            transform: rotate(0deg);
+        }
+    }
+
+    .dia-horario{
+        margin: 5% 0% 5% 0%;
+    }
+
+    .dia-horario-azul{
+        margin: 5% 0% 5% 0%;
+    }
+
+    #almuerzo{
+        font-size: 150%;
+        margin-bottom: 2%;
+    }
+
+    .dia-texto{
+        margin-bottom: 5%;
+        h3{
+            line-height: 100%;
+            margin-bottom: 2%;
+        }
+        p{
+            margin-bottom: 5%; 
+            width: 95%;
+        }
+    }
+
+    .dia-texto-parrafo{
+        width: 100%;
+        margin-right: 0%;
+    }
+
+    #entradas{
+        padding: 0% 8% 10% 8%;
+    }
+    
+    #entrada-titulo{
+        flex-flow: row wrap;
+        margin-bottom: 6%;
+        div{
+            margin-bottom: 5%;
+            order:1;
+        }
+    }
+
+    #entrada-img-izquierda{
+        transform: rotate(-20deg) scale(0.7);
+        order:2;
+    }
+    
+    #entrada-img-derecha{
+        transform: rotate(20deg) scale(0.7);
+        order:3;
+    }
+
+    #entradas-flex{
+        display: flex;
+        flex-flow: row wrap;
+        align-content: space-between;
+        align-items: center;
+        article{
+            width: 350px;
+            text-align: center;
+            div {
+                h2{
+                font-size: 150%;
+                margin-bottom: 1%;
+                }
+                p{
+                    margin-bottom: 1%;
+                }
+            }
+        a{
+            margin-top: 0%;
+            margin-bottom: 15%;
+         }
+        }
+    }
+    
+    #main-shop{
+        padding: 16% 8% 8% 8%;
+        padding-bottom: 10%;
+        flex-flow: column nowrap;
+        #caja-shop{
+           width: 100%;
+           height: 100%;
+           margin-right: 0%;
+           margin-bottom: 10%;
+           h1{
+               font-size: 200%;
+               padding: 7%;
+           }
+           #caja-sintitulo{
+               padding: 5% 10% 10% 10%;
+               #shop-parrafo{
+                   margin-bottom: 10%;
+               }
+           }
+       }
+    } 
+    #productos{
+        width: 100%;
+        article{
+            padding: 8% 8% 3% 8%;
+            width: 100%;
+            margin-bottom: 5%;
+        }
+    }
+
+    #contacto{
+        padding: 10% 8% 10% 8%;
+        height: 100%;
+        #contacto-flex{
+            margin-top: 10%;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            #contacto-caja-texto {
+                width: 100%;
+                img{
+                    width: 50%;
+                    margin-bottom: 8%;
+                }
+            }
+        }
+    }
+    .contacto-parrafo{
+        width: 100%;
+    }
+
+    fieldset{
+        width: 100%;
+    }
+
+    .form-check-label{
+        width: 80%;
+    }
+
+    .btn-primary{
+        padding: 2% 6% 2% 6%;
+      }
+
+
     footer {
-        padding: 5% 15% 1% 15%;
+        padding: 5% 5% 1% 7%;
+        width: 100%;
     }
+    #footer-flex{
+        justify-content: space-between;
+        margin-bottom: 4%;
+        div{
+            margin-top: 3%;
+            width: 150px;
+            a:hover{
+                color: $coral;
+                .titulo-almendra-gris{
+                    font-size: 200%;
+                }    
+                .texto-footer{
+                    font-size: 200%;
+                }
+            }
+        }
+    }
+    .logo-chico {
+        width: 60%;
+        margin: 30px 0px 30px 0px;
+    }
+    #disenado-por{
+        padding: 2% 0% 2% 0%;
+    }
+
+    #fondo-404{
+        padding: 10% 5% 15% 5%;
+        h2{
+            margin-bottom: 0px;
+        }
+        img{
+            margin-bottom: 30px;
+        }
+        .contenido-404{
+           div{
+               margin-right: 0%;
+               .subtitulo-404{
+                    margin-top: 8%;
+                    margin-bottom: 2%;
+                }
+           }
+       }
+    }
+   
+
+}
+
+@media only screen and (min-width:601px) and (max-width:1024px){
+    .navbar{
+        position: static;
+        width: 100%;
+    }
+
+    .navbar-collapse .navbar-nav {
+        width: 100%;
+        flex-flow: row;
+    }
+
+    .fondo-rosa-inicio {
+        height: 450px;
+    }
+
+    .texto-bienvenida{
+        width: 300px;
+        margin-top:0%;
+        padding: 1%;
+        h1{
+            color:$azul;
+            font-size: 200%;
+        }
+    }
+
+    .index-foto{
+        position: relative;
+        #izquierda-1{
+            transform: rotate(-15deg) scale(0.7);
+            position: absolute;
+            top: 150px;
+            z-index: 1;
+        }
+        
+        #izquierda-2{
+            transform: rotate(15deg) translateX(15px) scale(0.7);
+            margin-top: 0px;
+        }
+        
+        #derecha-1{
+            transform: rotate(15deg) scale(0.7);
+            position: absolute;
+            top: 150px;
+            z-index: 1;
+        }
+        
+        #derecha-2{
+            transform: rotate(-15deg) translateX(-15px) scale(0.7);
+            margin-top: 0px;
+        }
+    }
+
+    .nacimiento {
+        padding: 8%;
+        display: grid;
+        justify-content: center;
+	    align-content: center;
+        grid-template-columns:1fr;
+        grid-row: repeat (3, 1fr);
+        grid-template-areas: 
+        'titulo'
+        'ilustracion'
+        'caja';
+        img{
+            grid-area: ilustracion;
+            width: 50%;
+            margin: auto;
+            margin-bottom: 5%;
+        }
+    }
+    .titulo-nacimiento{
+        grid-area: titulo;
+        text-align: center;
+        h1{
+        width: 100%;
+        }
+    }    
+    .cajon-nacimiento{
+        grid-area: caja;
+        padding: 6% 6% 5% 6%;
+        margin: auto;
+        text-align: left;
+        .razon-nacimiento{
+            margin-bottom: 3%;
+        }
+    }
+
+    .quienes-somos{
+        padding: 8% 10% 15% 8%;
+        article{
+            justify-content: center;
+            div{
+                margin-top: 0%;
+            }        
+        }   
+    }
+    .hacer-ceramica{
+        padding: 8% 10% 15% 8%;
+        div{
+            justify-content: space-around;}
+    }
+
+    .fondo-rosa{
+        padding:8% 10% 8% 10%;
+     }
+
+    #talleres-disponibles{
+        padding: 10% 8% 10% 8%;
+        article.anuales{
+            margin-top: 5%;
+        }
+    }
+
+    .workshop-1{
+        img{   
+        width: 100%;
+        }
+    }
+
+    .fondo-rosa-expo{
+        padding:15% 20% 25% 20%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 450px;
+        #expo-titulo-head {
+            margin-top: 0%;
+        }
+        a{
+            margin-bottom: 70%; 
+        }
+     }
+
+    .fondo-claro{
+        padding:10% 8% 10% 8%;
+        h1{
+            margin-bottom: 2%;
+        }
+        .parrafo-exposicion{
+            font-size: 100%;
+            margin-bottom: 5%;
+        }
+        #expo2020-encontrar{
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            article{
+                text-align: center;
+                margin-bottom: 0%;
+                img{
+                    width: 40%;
+                    }
+                }
+            }
+    }
+
+    #expositoras-back{
+        padding:10% 8% 10% 8%;
+    }
+
+    #agenda-2020{
+        padding:10% 8% 10% 8%;
+    }
+
+    .agenda-dia{
+        padding:5% ;
+    }
+
+    .dia-horario{
+        margin-right: 30%;
+        margin-bottom: 2%;
+    }
+
+    .dia-texto{
+        margin-left: 3%;
+    }
+
+    .dia-texto-parrafo{
+        width: 270px;
+        margin-right: 2%;
+    }
+
+    #entradas{
+        padding: 0% 8% 10% 8%;
+        text-align: center;
+    }
+
+    #entrada-titulo{
+        margin-bottom: 4%;
+    }
+
+    #entrada-img-izquierda{
+        transform: rotate(-20deg) scale(0.7);
+        margin-right: 2%;
+    }
+    
+    #entrada-img-derecha{
+        transform: rotate(20deg) scale(0.7);
+        margin-left: 2%;
+    }
+
+    #main-shop{
+        padding: 8% 8% 8% 8%;
+        flex-flow: row nowrap;
+        #caja-shop{
+           width: 50%;
+           height: 100%;
+           margin-right: 5%;
+           h1{
+            line-height: 100%;
+            padding: 6% 0% 6% 10%;
+        }
+           #caja-sintitulo{
+               padding: 5% 10% 10% 10%;
+               #shop-parrafo{
+                   margin-bottom: 10%;
+               }
+           }
+       }
+    } 
+    #productos{
+        width: 50%;
+        article{
+            padding: 8% 8% 3% 8%;
+            width: 100%;
+            margin-bottom: 5%;
+        }
+    }
+
+    #shop-filtros{ 
+        h2{
+            font-size: ($font-size/2)-6;
+            width: 100%;
+        }
+    }
+
+    #contacto{
+        padding: 5% 8% 10% 8%;
+        #contacto-flex{
+            margin-top: 0%;
+            #contacto-caja-texto {
+                width: 90%;
+                .caja-parrafo-contacto-flex{
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: space-between;
+                    align-items: center;
+                    #telefonos{
+                        width: 50%;
+                    }
+                }
+                img{
+                    width: 30%;
+                }
+                .titulo-almendra-azul{
+                    font-size: 190%;
+                }
+                #contacto-subtitulo{
+                    font-size: 90%;
+                    width: 80%;
+                }
+            }
+        }
+    }
+    
+    .contacto-parrafo{
+        margin: 3% 0% 5% 0%;
+        width: 85%;
+    }
+
+    fieldset{
+        width: 100%;
+    }
+    
+
+    footer {
+        background-color: #3a3635;
+        padding: 9% 3% 1% 3%;
+    }
+    
     .logo-chico{
-      padding-top: 20px;
-      padding-bottom: 25px;
+        width: 100%;
+        margin-right: 0;
     }
-  }
+    
+    #footer-flex{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        margin-bottom: 4%;
+        a{
+            width: 100px;
+        }
+        div{
+            width: 17%;
+            a:hover{
+                color: $coral;
+             }
+        }
+    }
+
+    #fondo-404{
+        background-color: $rosa;
+        padding: 0% 5% 10% 5%;
+        .contenido-404{
+           display: flex;
+           flex-flow: row wrap;
+           align-items: center;
+           justify-content: center;
+           div{
+               width: 300px;
+           }
+       }
+    }
+}
+
+@media only screen and (min-width:1024px) and (max-width:1200px){
+   
+    h1{
+        font-size: ($font-size)-5px; 
+    }
+    p{
+        font-size: ($font-size)-32px; 
+    }
+
+    .navbar{
+       
+        width: 100%;
+    }
+
+
+     .fondo-rosa-inicio {
+        height: 700px;
+    }
+    
+    .texto-bienvenida{
+        width: 500px;
+        align-self:center;
+        margin-top:8%;
+        padding: 5%;
+    }
+    
+    .index-foto{
+        position: relative;
+        #izquierda-1{
+            transform: rotate(-15deg) scale(0.9);
+            position: absolute;
+            top: 350px;
+            z-index: 1;
+        }
+        
+        #izquierda-2{
+            transform: rotate(15deg) translateX(15px) scale(0.9);
+            margin-top: 150px;
+        }
+        
+        #derecha-1{
+            transform: rotate(15deg) scale(0.9);
+            position: absolute;
+            top: 350px;
+            z-index: 1;
+        }
+        
+        #derecha-2{
+            transform: rotate(-15deg) translateX(-15px) scale(0.9);
+            margin-top: 150px;
+        }
+    }
+
+    .fondo-rosa{
+        padding:18% 10% 10% 10%;
+     }
+    
+    #talleres-disponibles{
+        padding: 10% 8% 5% 8%;
+        article.anuales{
+            margin-top: 0%;
+        }
+    }
+
+    .fondo-rosa-expo{
+        padding:15% 8% 15% 8%;
+        background-size: fit;
+        height: 550px;
+        #expo-titulo-head {
+            text-shadow: 0px 0px 20px rgb(243, 239, 239);
+            margin-top: 10%;
+            }
+        }
+
+    .agenda-dia{
+        padding: 3% 2% 3% 2%;
+    }
+
+    .dia-texto{
+        p{
+            font-size: 120%;
+        }
+        .agenda-profesor{
+            font-size: 90%;
+            margin-top: 0.5%;
+        }
+    }
+     
+    .dia-texto-parrafo{
+        width: 400px;
+        margin-right: 2%;
+    }
+
+    #entradas-flex{
+        article{
+            width: 50%;
+            text-align: center;
+            .precio-producto{
+                font-size: 350%;
+            }
+            .h2-almendra-coral{
+                font-size: 200%;
+            }
+        .subtitulo-azul-chico {
+            font-size: 100%;
+            margin-bottom: 3%;}
+        }
+        .boton-coral{
+            margin-top: 0;
+        }
+    }
+
+    #entradas{
+        padding: 0% 8% 10% 8%;
+        text-align: center;
+    }
+
+    #entrada-titulo{
+        margin-bottom: 4%;
+    }
+
+    #entrada-img-izquierda{
+        transform: rotate(-20deg) scale(0.9);
+        margin-right: 7%;
+    }
+    
+    #entrada-img-derecha{
+        transform: rotate(20deg) scale(0.9);
+        margin-left: 7%;
+    }
+
+    #main-shop{
+        padding: 16% 8% 8% 8%;
+        flex-flow: row nowrap;
+        #caja-shop{
+            width: 44%;
+            margin-right: 3%;
+       }
+    } 
+
+    #productos{
+        width: 80%;
+        article{
+            background-color: $rosa;
+            padding: 4% 4% 3% 4%;
+            width: 49%;
+            margin-bottom: 5%;
+            border-radius: 0.3em;
+            &:hover{
+                box-shadow: 5px 5px 5px 1px rgba(209, 207, 205, 0.5);
+            }
+            img{
+                width: 100%;
+                padding-bottom: 8%;
+            }
+            .comprar-producto{
+                p{
+                    font-size: 200%;
+                }
+            }
+        }
+    }
+
+}

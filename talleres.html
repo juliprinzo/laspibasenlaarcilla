@@ -3,9 +3,10 @@
 	<head>
 		<title>Las pibas en la arcilla-talleres</title>
 		<meta charset="UTF-8">
-		<meta name="description" content="Talleres y workshops de ceramica en argentina">
-		<meta name="keywords" content="ceramica, arcilla, taller, workshop">
+		<meta name="description" content="Descubrí un nuevo mundo. Mirá la oferta de talleres y workshops dictados por maestras ceramistas en capital federal, buenos aires.">
+		<meta name="keywords" content="ceramica, arcilla, taller, workshop, relajacion, hobbie, actividad, torno">
 		<meta name="author" content="Las pibas en la arcilla">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link href="https://fonts.googleapis.com/css2?family=Almendra:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/reset.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -13,16 +14,32 @@
 	</head>
 	<body>
 		<!--MENU-->
-		<header>
-			<nav id="nav-menu">  
-				<ul id="menu-header">
-					<li><a class="page" href="expo2020.html">Expo 2020</a></li>
-					<li><a class="current-page" href="talleres.html">Talleres</a></li>
-					<li><a class="page" href="index.html"><img src="img/logo-pibasarcilla.svg"></a></li>
-					<li><a class="page" href="shop.html">Shop</a></li>
-					<li><a class="page" href="contacto.html">Contacto</a></li>
-				</ul>
-			</nav>
+		<header id="contenedor-header">
+			<nav class="navbar rosa navbar-expand-lg navbar-light">
+				<a class="navbar-brand" href="index.html"><img src="img/logo-pibasarcilla.svg" alt="logo-pibasenlaarcilla"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				  <span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+				  <ul class="navbar-nav">
+					<li class="nav-item">
+					  <a class="nav-link" href="expo2020.html">expo 2020</a>
+					</li>
+					<li class="nav-item">
+					  <a class="current-page" href="talleres.html">talleres</a>
+					</li>
+					<li class="li-brand">
+				 	 <a class="nav-link" href="index.html"><img src="img/logo-pibasarcilla.svg" alt="logo-pibasenlaarcilla"></a>
+				 	</li>
+					<li class="nav-item">
+						<a class="nav-link" href="shop.html">shop</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contacto.html">contacto</a>
+					</li>
+				  </ul>
+				</div>
+			</nav>	
 		</header>
 	<!--CONTENIDO PAGINA-->
 	<main>
@@ -41,88 +58,102 @@
 				<div>
 					<h2 class="h2-open-coral">exposicion 2020</h2>
 					<p>Conocé los talleres de la nueva edicion de "Pibas en la arcilla" en septiembre.</p>
-					<a href="#workshops-expo" class="boton-coral">Workshops de la expo</a>
+					<a href="#workshops-expo2020" class="boton-coral">Workshops de la expo</a>
 				</div>
 			</article>
 		</section>
 
 		<!--TALLERES-DOSPONIBLES-->
 		<section id='talleres-disponibles'>
-			<section id="grid-talleres">
-				<article class="anuales">
-					<img class="talleres-ilus" src="img/talleres/250x250-ilus-anual.png">
-					<h2 class="titulo-almendra-coral">Talleres anuales</h2>
-					<p class="p-talleres">Para aquelles que quieran profundizar de manera constante y desconectar 1, 2 o hasta 3 veces por semana.</p>
-					<ul class="talleres-items">
-						<li>Clases de hasta 4 horas diarias</li>
-						<li>Abono mensual</li>
-						<li>Todos los materiales incluidos</li>
-					</ul>
-				</article>
-				<article id="opcion-anuales">
-					<a class="hvr-grow" href="https://www.facebook.com/latorneta/">
-						<div>
-							<img src="img/talleres/taller-1.jpg">
-							<h3 class="titulo-talleres-caja">La torneta</h3>
-							<article class="texto-interno-talleres">
-								<h4 class="titulo-chico-coral">Lugar</h4>
-								<p>Av. Triunvirato 3450, Villa Urquiza, CABA.</p>
-								<h4 class="titulo-chico-coral">Horarios</h4>
-								<p>Lunes, Miercoles y Viernes de 18:00hs a 21:00hs.</p>
-								<h4 class="titulo-chico-coral">Especializadas en</h4>
-								<p>Torno, modelado, esmaltes y pastas propias</p>
+			<div class="container">
+				<section class="row d-flex flex-wrap justify-content-sm-center flex-md-wrap justify-content-md-center flex-lg-nowrap flex-xl-nowrap justify-content-lg-between">
+					<article class="anuales col-12 col-sm-10 mr-sm-0 mb-sm-4 col-md-12 col-lg-4 mr-lg-4">
+						<div class="container">
+							<article class="column d-flex flex-wrap flex-md-nowrap flex-lg-wrap flex-xl-wrap justify-content-start">
+								<div class="col-12 col-sm-10 mr-sm-0 mb-sm-4 col-md-3 col-lg-12 mb-lg-2">
+									<img class="talleres-ilus" src="img/talleres/250x250-ilus-anual.png" alt="ilustracion rosa de calendario y pincel">
+								</div>
+								<div class="col-12 col-sm-10 mr-sm-0 mb-sm-4 col-md-5 col-lg-12 mb-lg-0">
+									<h2 class="titulo-almendra-coral">Talleres anuales</h2>
+									<p class="p-talleres">Para aquelles que quieran profundizar de manera constante y desconectar 1, 2 o hasta 3 veces por semana.</p>
+								</div>
+								<ul class="talleres-items col-12 col-sm-10 mr-sm-0 mb-sm-4 col-md-4 col-lg-12">
+									<li>Clases de hasta 4 horas diarias</li>
+									<li>Abono mensual</li>
+									<li>Todos los materiales incluidos</li>
+								</ul>
 							</article>
 						</div>
+					</article>
+					<a class="opcion-anuales hvr-grow col-12 col-sm-10 mb-sm-4 col-md-5 mr-md-4 mr-md-0 col-lg-4 mr-lg-3" href="https://www.facebook.com/latorneta/" target="_blank">
+						<img src="img/talleres/taller-1.jpg" alt="foto de piezas ceramicas rosadas hechas en el taller de la torneta">
+						<h3 class="titulo-talleres-caja">La torneta</h3>
+						<article class="texto-interno-talleres">
+							<h4 class="titulo-chico-coral">Lugar</h4>
+							<p>Av. Triunvirato 3450, Villa Urquiza, CABA.</p>
+							<h4 class="titulo-chico-coral">Horarios</h4>
+							<p>Lunes, Miercoles y Viernes de 18:00hs a 21:00hs.</p>
+							<h4 class="titulo-chico-coral">Especializadas en</h4>
+							<p>Torno, modelado, esmaltes y pastas propias</p>
+						</article>
 					</a> 
-					<a class="hvr-grow" href="https://www.facebook.com/latorneta/">
-						<div>
-							<img src="img/talleres/taller-2.jpg">
-							<h3 class="titulo-talleres-caja">Casa de barro</h3>
-							<article class="texto-interno-talleres">
-								<h4 class="titulo-chico-coral">Lugar</h4>
-								<p>Av. Niceto Vega 3908, Palermo, CABA.</p>
-								<h4 class="titulo-chico-coral">Horarios</h4>
-								<p>Martes y Viernes de 19:00hs a 21:00hs.</p>
-								<h4 class="titulo-chico-coral">Especializadas en</h4>
-								<p>Modelado, pastas propias, lustre dorado</p>
+					<a class="opcion-anuales hvr-grow col-12 mt-4 mt-md-0 mt-lg-0 mt-xl-0 col-sm-10 mr-sm-0 mb-sm-4 col-md-5 mr-md-1 col-lg-4" href="http://www.elfango.com.ar/" target="_blank">
+						<img src="img/talleres/taller-2.jpg" alt="foto de tazas blancas con dorado de jirafas hechas en el taller casa de barro">
+						<h3 class="titulo-talleres-caja">Fango taller</h3>
+						<article class="texto-interno-talleres">
+							<h4 class="titulo-chico-coral">Lugar</h4>
+							<p>Av. Niceto Vega 3908, Palermo, CABA.</p>
+							<h4 class="titulo-chico-coral">Horarios</h4>
+							<p>Martes y Viernes de 19:00hs a 21:00hs.</p>
+							<h4 class="titulo-chico-coral">Especializadas en</h4>
+							<p>Modelado, pastas propias, lustre dorado</p>
+						</article>
+					</a>
+				</section>
+			</div>
+			<div class="container">
+				<section class="row d-flex flex-wrap flex-md-wrap justify-content-md-center align-items-md-center flex-lg-nowrap flex-xl-nowrap justify-content-lg-between">
+					<article class="anuales col-12 col-sm-10 mr-sm-0 mb-sm-4 col-md-12 col-lg-4 mr-lg-4">
+						<div class="container">
+							<article class="column d-flex flex-wrap flex-md-nowrap flex-lg-wrap flex-xl-wrap justify-content-start">
+								<div class="col-12 col-sm-10 mr-sm-0 mb-sm-4 col-md-3 col-lg-12 mb-lg-2">
+									<img class="talleres-ilus" src="img/talleres/250x250-ilus-workshop.png" alt="ilustracion rosada de reloj y herramientas ceramicas">
+								</div>
+								<div class="col-12 col-sm-10 mr-sm-0 mb-sm-4 col-md-5 col-lg-12 mb-lg-0">
+									<h2 class="titulo-almendra-coral">Formato Workshop</h2>
+									<p class="p-talleres">Cuando estás justa de tiempo pero querés probar algo nuevo y accesible.</p>
+								</div>
+								<ul class="talleres-items col-12 col-sm-10 mr-sm-0 mb-sm-4 col-md-4 col-lg-12">
+									<li>Jornadas independientes</li>
+									<li>Oferta de tecnicas/ experimental</li>
+									<li>Todos los materiales incluidos</li>
+								</ul>
 							</article>
 						</div>
-						</a> 
-				</article>
-				<article id="workshops">
-						<img class="talleres-ilus" src="img/talleres/250x250-ilus-workshop.png">
-						<h2 class="titulo-almendra-coral">Formato Workshop</h2>
-						<p class="p-talleres">Cuando estás justa de tiempo pero querés probar algo nuevo y accesible, optas por los worshops.</p>
-						<ul class="talleres-items">
-							<li>Jornadas independientes</li>
-							<li>Oferta de tecnicas/ experimental</li>
-							<li>Todos los materiales incluidos</li>
-						</ul>
-				</article>
-				<article id="opcion-workshops">
-						<a class="workshop-1 hvr-grow" href="https://www.instagram.com/aww_mini/?hl=es-la">
-							<img src="img/talleres/taller-3.jpg">
-							<div>
-								<h3>Modelado de animales</h3>
-								<p>Por Aww Mini</p>
-							</div>
-						</a>
-						<a class="workshop-1 hvr-grow" href="https://www.facebook.com/latorneta/">
-							<img src="img/talleres/taller-4.jpg">
-							<div>
-								<h3>Introduccion al torno</h3>
-								<p>Por La Torneta</p>
-							</div>
-						</a>
-				</article>
-			</section>
+					</article>
+							<a class="workshop-1 hvr-grow col-12 col-sm-10 mr-sm-0 mb-sm-4 col-md-5 ml-md-0 mr-md-4 col-lg-4 mr-lg-3" href="https://www.instagram.com/aww_mini/?hl=es-la" target="_blank">
+								<img src="img/talleres/taller-3.jpg" alt="foto de pieza ceramica en forma de huevo por aww mini">
+								<div>
+									<h3>Modelado de animales</h3>
+									<p>Por Aww Mini</p>
+								</div>
+							</a>
+							<a class="workshop-1 hvr-grow col-12 mt-4 mt-md-0 mt-lg-0 mt-xl-0 col-sm-10 mr-sm-0 mb-sm-4 col-md-5 col-lg-4" href="https://www.facebook.com/latorneta/" target="_blank">
+								<img src="img/talleres/taller-4.jpg" alt="foto de ceramicas escultoricas hechas por la torneta">
+								<div>
+									<h3>Esculturas decorativas</h3>
+									<p>Por La Torneta</p>
+								</div>
+							</a>
+				</section>
+			</div>
 		</section>	
 		<!--EXPO2020-->
-		<section id="workshops-expo">
+		<section id="workshops-expo2020">
 			<article id="titulo-expo2020">
 				<p>Septiembre 2020</p>
 				<span class="dot"></span>
-				<img src="img/logo-pibasarcilla-blanco.svg">
+				<img src="img/logo-pibasarcilla-blanco.svg" alt="logo de las pibas en la arcilla en blanco">
 				<span class="dot"></span>
 				<p>Workshops</p>	
 			</article>
@@ -132,54 +163,64 @@
 			</article>
 			<hr class="separador-rosa-grueso">
 			<article id="expo-talleres">
-				<div class="taller-expo">
-					<img class="taller-expo-img" src="img/talleres/expo-1.jpg">
-					<div class="taller-div">
-						<div class="taller-div-height">
-							<h3>Experimentación en el torno</h3>
-							<p class="taller-expo-profesor"> Por La Torneta</p>
-							<p class="taller-expo-texto"> Expirementamos con el torno y las terminaciones a realizar fuera de el.</p>
-							<p class="taller-expo-fecha">22/09/2020 · 16:00hs</p>
+			<div class="container">
+				<section class="row d-flex flex-wrap flex-md-nowrap flex-lg-nowrap flex-xl-nowrap justify-content-between">
+					<div class="taller-expo hvr-grow mb-4 col-sm-12 mr-sm-0 mb-sm-4 col-md-7 mr-md-4 col-lg-8 mr-lg-4">
+						<img class="taller-expo-img" src="img/talleres/expo-1.jpg" alt="imagen de gres siendo trabajado en crudo en la torneta">
+						<div class="taller-div">
+							<div class="taller-div-height">
+								<h3>Experimentación en el torno</h3>
+								<p class="taller-expo-profesor"> Por La Torneta</p>
+								<p class="taller-expo-texto"> Expirementamos con el torno y las terminaciones a realizar fuera de el.</p>
+								<p class="taller-expo-fecha">22/09/2020 · 16:00hs</p>
+							</div>
+							<a class="boton-coral" href="contacto.html" target="_blank">Quiero inscribirme</a>
 						</div>
-						<a class="boton-coral" href="">Quiero inscribirme</a>
 					</div>
-				</div>
-				<div class="taller-expo-chico">
-					<div class="taller-div">
-						<div class="taller-div-height">
-							<h3>Animales</h3>
-							<p class="taller-expo-profesor"> Por Aww Mini</p>
-							<p class="taller-expo-texto"> Aprende a modelar y pintar tu animal favorito en masilla.</p>
-							<p class="taller-expo-fecha">23/09/2020 · 15:00hs</p>
+					<div class="taller-expo-chico hvr-grow mb-4 col-sm-12 mr-sm-0 mb-sm-4 col-md-5 col-lg-4">
+						<div class="taller-div">
+							<div class="taller-div-height">
+								<h3>Animales</h3>
+								<p class="taller-expo-profesor"> Por Aww Mini</p>
+								<p class="taller-expo-texto"> Aprende a modelar y pintar tu animal favorito en masilla.</p>
+								<p class="taller-expo-fecha">23/09/2020 · 15:00hs</p>
+							</div>
+							<a class="boton-coral" href="contacto.html" target="_blank">Quiero inscribirme</a>
 						</div>
-						<a class="boton-coral" href="">Quiero inscribirme</a>
 					</div>
-				</div>
-				<div class="taller-expo-chico">
-					<div class="taller-div">
-						<div class="taller-div-height">
-							<h3>Torno</h3>
-							<p class="taller-expo-profesor"> Por La Torneta</p>
-							<p class="taller-expo-texto"> Introduccion en esta practica milenaria, ideal para las que se inician en este oficio.</p>
-							<p class="taller-expo-fecha">23/09/2020 · 11:00hs</p>
+				</section>
+			</div>
+			<div class="container">
+				<section class="row d-flex flex-wrap flex-md-nowrap flex-lg-nowrap flex-xl-nowrap justify-content-between">
+					<div class="taller-expo-chico hvr-grow col-sm-12 mr-sm-0 mb-sm-4 col-md-5 mr-md-4 col-lg-4 mr-lg-4">
+						<div class="taller-div">
+							<div class="taller-div-height">
+								<h3>Torno</h3>
+								<p class="taller-expo-profesor"> Por La Torneta</p>
+								<p class="taller-expo-texto"> Introduccion en esta practica milenaria, ideal para las que se inician en este oficio.</p>
+								<p class="taller-expo-fecha">23/09/2020 · 11:00hs</p>
+							</div>
+							<a class="boton-coral" href="contacto.html" target="_blank">Quiero inscribirme</a>
 						</div>
-						<a class="boton-coral" href="">Quiero inscribirme</a>
 					</div>
-				</div>
-				<div class="taller-expo">
-					<img class="taller-expo-img" src="img/talleres/expo-2.jpg">
-					<div class="taller-div">
-						<div class="taller-div-height">
-							<h3>Creando mis esmaltes</h3>
-							<p class="taller-expo-profesor"> Por La Torneta</p>
-							<p class="taller-expo-texto"> Cómo crear mis vidrios, sus procesos químicos y reacciones segun las distintas temperaturas y materiales.</p>
-							<p class="taller-expo-fecha">22/09/2020 · 12:30</p>
+					<div class="taller-expo hvr-grow col-sm-12  mt-4 mt-lg-0 mt-xl-0 mt-md-0 mr-sm-0 mb-sm-4 col-md-7 col-lg-8">
+						<img class="taller-expo-img" src="img/talleres/expo-2.jpg" alt="imagen de mano pintando de manera abstracta unos platos ceramicos">
+						<div class="taller-div">
+							<div class="taller-div-height">
+								<h3>Creando mis esmaltes</h3>
+								<p class="taller-expo-profesor"> Por La Torneta</p>
+								<p class="taller-expo-texto"> Cómo crear mis vidrios, sus procesos químicos y reacciones segun las distintas temperaturas y materiales.</p>
+								<p class="taller-expo-fecha">22/09/2020 · 12:30</p>
+							</div>
+							<a class="boton-coral" href="contacto.html" target="_blank">Quiero inscribirme</a>
 						</div>
-						<a class="boton-coral" href="">Quiero inscribirme</a>
 					</div>
-				</div>
-				<div class="taller-expo">
-					<img class="taller-expo-img" src="img/talleres/expo-3.jpg">
+				</section>
+			</div>
+			<div class="container">
+				<section class="row d-flex flex-wrap flex-md-nowrap flex-lg-nowrap flex-xl-nowrap justify-content-between">
+				<div class="taller-expo hvr-grow col-sm-12 mt-4 mt-lg-0 mt-xl-0 mt-md-0 mr-sm-0 mb-sm-4 col-md-7 mr-md-4 col-lg-8 mr-lg-4">
+					<img class="taller-expo-img" src="img/talleres/expo-3.jpg" alt="imagen de mano pintando con azul un plato ceramico">
 					<div class="taller-div">
 						<div class="taller-div-height">
 							<h3>Fabricando mi pasta</h3>
@@ -187,10 +228,10 @@
 							<p class="taller-expo-texto"> Acá vas a aprender lo basico sobre la arcilla, materiales, esmaltados, pastas y experimentacion.</p>
 							<p class="taller-expo-fecha">22/09/2020 · 15:00hs</p>
 						</div>
-						<a class="boton-coral" href="">Quiero inscribirme</a>
+						<a class="boton-coral" href="contacto.html" target="_blank">Quiero inscribirme</a>
 					</div>
 				</div>
-				<div class="taller-expo-chico">
+				<div class="taller-expo-chico hvr-grow col-sm-12 mt-4 mt-lg-0 mt-xl-0 mt-md-0 mr-sm-0 mb-sm-4 col-md-5 col-lg-4">
 					<div class="taller-div">
 						<div class="taller-div-height">
 							<h3>Modelado</h3>
@@ -198,9 +239,11 @@
 							<p class="taller-expo-texto"> Ideal para las que recién se inician en este oficio y quieren sentir el material a su ritmo.</p>
 							<p class="taller-expo-fecha">23/09/2020 · 13:00hs</p>
 						</div>
-						<a class="boton-coral" href="">Quiero inscribirme</a>
+						<a class="boton-coral" href="contacto.html" target="_blank">Quiero inscribirme</a>
 					</div>
 				</div>
+			</section>
+			</div>
 			</article>
 			<p class="destacado-almendra">¡Te esperamos!</p>
 		</section>
@@ -239,7 +282,7 @@
 				</div>
 			</section>
 			<hr class="separador-gris">
-			<p id="disenado-por">Diseñado por Julia Prinzo · 2020</p>
+			<p id="disenado-por">Diseñado por Julia Prinzo · 2020 · Las imágenes no son de mi autoria · La información utilizada no es real</p>
 		</footer>
 		<!--FIN-FOOTER-->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

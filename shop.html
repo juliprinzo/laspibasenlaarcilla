@@ -3,9 +3,10 @@
 	<head>
 		<title>Las pibas en la arcilla-Shop</title>
 		<meta charset="UTF-8">
-		<meta name="description" content="Compra productos de mujeres ceramistas argentinas.">
-		<meta name="keywords" content="ceramica, arcilla, productos, emprendedora">
+		<meta name="description" content="Encontrá productos de mujeres ceramistas argentinas y regalá/regalate nacional.">
+		<meta name="keywords" content="ceramica, arcilla, productos, emprendedora, regalo, nuevo, artesania, nacional, cuotas, compra online, compra">
 		<meta name="author" content="Las pibas en la arcilla">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link href="https://fonts.googleapis.com/css2?family=Almendra:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/reset.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -13,16 +14,32 @@
 	</head>
 	<body>
 		<!--MENU-->
-		<header>
-			<nav id="nav-menu"> 
-				<ul id="menu-header">
-					<li><a class="page" href="expo2020.html">Expo 2020</a></li>
-					<li><a class="page" href="talleres.html">Talleres</a></li>
-					<li><a class="page" href="index.html"><img src="img/logo-pibasarcilla.svg"></a></li>
-					<li><a class="current-page" href="shop.html">Shop</a></li>
-					<li><a class="page" href="contacto.html">Contacto</a></li>
-				</ul>
-			</nav>
+		<header id="contenedor-header">
+			<nav class="navbar neutro navbar-expand-lg navbar-light">
+				<a class="navbar-brand" href="index.html"><img src="img/logo-pibasarcilla.svg" alt="logo-pibasenlaarcilla"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				  <span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+				  <ul class="navbar-nav">
+					<li class="nav-item">
+					  <a class="nav-link" href="expo2020.html">expo 2020</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="talleres.html">talleres</a>
+					</li>
+				 	<li class="li-brand">
+				 	 <a class="nav-link" href="index.html"><img src="img/logo-pibasarcilla.svg" alt="logo-pibasenlaarcilla"></a>
+				 	</li>
+					<li class="nav-item">
+						<a class="current-page" href="shop.html">shop</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contacto.html">contacto</a>
+					</li>
+				  </ul>
+				</div>
+			</nav>	
 		</header>
 	<!--CONTENIDO PAGINA-->
 	<main id="main-shop">
@@ -39,11 +56,15 @@
 						<li>Puntos de entrega</li>
 					</ul>
 				</article>
+			<!--FAVS-->
+			<a id="favoritos" class="hvr-grow" href=""><img src="img/shop/like-lleno.svg" alt="icono-corazon-like">Ver mis favoritos</a>
+			<hr class="separador-neutro">
 			<!--FILTROS-->
 				<article id="shop-filtros">
+					<h2>Filtrá tus preferencias<img src="img/shop/filtro.svg" alt="icono-filtro"></h2>
 					<div>
-						<p>Por artistas</p>
-						<ul>
+						<a data-toggle="collapse" href="#filtro1" role="button" aria-expanded="true" aria-controls="filtro1">Por artistas</a>
+						<ul class="collapse show" id="filtro1">
 							<li class="badge badge-pill badge-light">Anic</li>
 							<li class="badge badge-pill badge-light">Libre</li>
 							<li class="badge badge-pill badge-light">Pina</li>
@@ -52,8 +73,8 @@
 						</ul>
 					</div>
 					<div>
-						<p>Por uso</p>
-						<ul>
+						<a data-toggle="collapse" href="#filtro2" role="button" aria-expanded="false" aria-controls="filtro2">Por uso</a>
+						<ul class="collapse" id="filtro2">
 							<li class="badge badge-pill badge-light">Decorativo</li>
 							<li class="badge badge-pill badge-light">Utilitario</li>
 							<li class="badge badge-pill badge-light">Jardin</li>
@@ -62,8 +83,8 @@
 						</ul>
 					</div>
 					<div>
-						<p>Por precio</p>
-						<ul>
+						<a data-toggle="collapse" href="#filtro3" role="button" aria-expanded="false" aria-controls="filtro3">Por precio</a>
+						<ul class="collapse" id="filtro3">
 							<li class="badge badge-pill badge-light">0$-$250</li>
 							<li class="badge badge-pill badge-light">250$-$600</li>
 							<li class="badge badge-pill badge-light">600$-$900</li>
@@ -72,13 +93,13 @@
 						</ul>
 					</div>
 					<div>
-						<p>Por color</p>
-						<ul>
-							<li class="badge badge-pill badge-light">0$-$250</li>
-							<li class="badge badge-pill badge-light">250$-$600</li>
-							<li class="badge badge-pill badge-light">600$-$900</li>
-							<li class="badge badge-pill badge-light">900$-$1500</li>
-							<li class="badge badge-pill badge-light">$1500-$3000</li>
+						<a data-toggle="collapse" href="#filtro4" role="button" aria-expanded="false" aria-controls="filtro4">Por color</a>
+						<ul class="collapse" id="filtro4">
+							<li class="badge badge-pill badge-light"><span class="dot-rosa"></span>Rosa</li>
+							<li class="badge badge-pill badge-light"><span class="dot-coral"></span>Coral</li>
+							<li class="badge badge-pill badge-light"><span class="dot-celeste"></span>Celeste</li>
+							<li class="badge badge-pill badge-light"><span class="dot-negro"></span>Negro</li>
+							<li class="badge badge-pill badge-light"><span class="dot-blanco"></span>Blanco</li>
 						</ul>
 					</div>
 				</article>
@@ -87,7 +108,7 @@
 		<!--PRODUCTOS-->
 		<section id="productos">
 			<article>
-				<img src="img/shop/producto1.jpg" alt="foto-producto">
+				<img src="img/shop/producto1.jpg" alt="foto producto florero con cara triste en rosa y negro">
 				<div class="nombre-like">
 					<div>
 						<h2 class="h2-almendra-azul">En el sueño</h2>
@@ -101,12 +122,12 @@
 				<hr class="separador-coral">
 				<div class="comprar-producto">
 					<p>$789</p>
-					<a class="boton-coral" href="">Lo quiero</a>
+					<a class="boton-coral" href="https://verdecactus.mitiendanube.com/productos/maceta-casa-simple/?variant=26927091" target="_blank">Lo quiero</a>
 				</div>
 			</article>
 			<!--PRODUCTO-2-->
 			<article>
-				<img src="img/shop/producto2.jpg" alt="foto-producto">
+				<img src="img/shop/producto2.jpg" alt="foto producto llamas en rosa y blanco hechas a mano terminacion rustica">
 				<div class="nombre-like">
 					<div>
 						<h2 class="h2-almendra-azul">Llamas</h2>
@@ -121,12 +142,12 @@
 				<div class="comprar-producto">
 					<p>$480</p>
 					<p class="por-unidad">por unidad</p>
-					<a class="boton-coral" href="">Lo quiero</a>
+					<a class="boton-coral" href="https://verdecactus.mitiendanube.com/productos/maceta-casa-simple/?variant=26927091" target="_blank">Lo quiero</a>
 				</div>
 			</article>
 			<!--PRODUCTO-3-->
 			<article>
-				<img src="img/shop/producto3.jpg" alt="foto-producto">
+				<img src="img/shop/producto3.jpg" alt="foto-producto de tazas celestes con los ciclos lunares ilustrados">
 				<div class="nombre-like">
 					<div>
 						<h2 class="h2-almendra-azul">Taza lunar</h2>
@@ -141,12 +162,12 @@
 				<div class="comprar-producto">
 					<p>$480</p>
 					<p class="por-unidad">por unidad</p>
-					<a class="boton-coral" href="">Lo quiero</a>
+					<a class="boton-coral" href="https://verdecactus.mitiendanube.com/productos/maceta-casa-simple/?variant=26927091" target="_blank">Lo quiero</a>
 				</div>
 			</article>
 			<!--PRODUCTO-4-->
 			<article>
-				<img src="img/shop/producto4.jpg" alt="foto-producto">
+				<img src="img/shop/producto4.jpg" alt="foto-producto de ballena porta maceta en rosa claro y blanco infantil">
 				<div class="nombre-like">
 					<div>
 						<h2 class="h2-almendra-azul">Maceta ballena</h2>
@@ -160,12 +181,12 @@
 				<hr class="separador-coral">
 				<div class="comprar-producto">
 					<p>$390</p>
-					<a class="boton-coral" href="">Lo quiero</a>
+					<a class="boton-coral" href="https://verdecactus.mitiendanube.com/productos/maceta-casa-simple/?variant=26927091" target="_blank">Lo quiero</a>
 				</div>
 			</article>
 			<!--PRODUCTO-5-->
 			<article>
-				<img src="img/shop/producto5.jpg" alt="foto-producto">
+				<img src="img/shop/producto5.jpg" alt="foto-producto de tazas blancas con formas geometricas pintadas en colores">
 				<div class="nombre-like">
 					<div>
 						<h2 class="h2-almendra-azul">Taza geometrica</h2>
@@ -180,12 +201,12 @@
 				<div class="comprar-producto">
 					<p>$430</p>
 					<p class="por-unidad">por unidad</p>
-					<a class="boton-coral" href="">Lo quiero</a>
+					<a class="boton-coral" href="https://verdecactus.mitiendanube.com/productos/maceta-casa-simple/?variant=26927091" target="_blank">Lo quiero</a>
 				</div>
 			</article>
 			<!--PRODUCTO-6-->
 			<article>
-				<img src="img/shop/producto6.jpg" alt="foto-producto">
+				<img src="img/shop/producto6.jpg" alt="foto-producto de bowls  con dibujos en colores celeste rosado coral rojo y azul en formas geometricas, pinceladas, lineas y circulos">
 				<div class="nombre-like">
 					<div>
 						<h2 class="h2-almendra-azul">Bowl decorativo</h2>
@@ -200,7 +221,7 @@
 				<div class="comprar-producto">
 					<p class="precio-producto">$580</p>
 					<p class="por-unidad">por unidad</p>
-					<a class="boton-coral" href="">Lo quiero</a>
+					<a class="boton-coral" href="https://verdecactus.mitiendanube.com/productos/maceta-casa-simple/?variant=26927091" target="_blank">Lo quiero</a>
 				</div>
 			</article>
 		</section>
@@ -239,7 +260,7 @@
 				</div>
 			</section>
 			<hr class="separador-gris">
-			<p id="disenado-por">Diseñado por Julia Prinzo · 2020</p>
+			<p id="disenado-por">Diseñado por Julia Prinzo · 2020 · Las imágenes no son de mi autoria · La información utilizada no es real</p>
 		</footer>
 		<!--FIN-FOOTER-->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

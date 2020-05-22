@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="es"> 
 	<head>
-		<title>Las pibas en la arcilla-home</title>
+		<title>Las pibas en la arcilla-Home</title>
 		<meta charset="UTF-8">
-		<meta name="description" content="Mujeres emprendedoras en la ceramica">
-		<meta name="keywords" content="ceramica, arcilla, taller, emprendedora">
+		<meta name="description" content="Mujeres emprendedoras de la ceramica organizan un evento anual para reunirnos las que se inician en este oficio como a las que ya se enamoraron de el">
+		<meta name="keywords" content="ceramica, arcilla, esculturas, taller, emprendedora, workshop, taller, reunion, empoderamiento, oficio">
 		<meta name="author" content="Las pibas en la arcilla">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
 		<link href="https://fonts.googleapis.com/css2?family=Almendra:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/reset.css">
@@ -14,39 +15,55 @@
 	</head>
 	<body>
 		<!--MENU-->
-		<header>
-			<nav id="nav-menu"> 
-				<ul id="menu-header">
-					<li><a class="page" href="expo2020.html">expo 2020</a></li>
-					<li><a class="page" href="talleres.html">talleres</a></li>
-					<li><a href="index.html"><img src="img/logo-pibasarcilla.svg"></a></li>
-					<li><a class="page" href="shop.html">shop</a></li>
-					<li><a class="page" href="contacto.html">contacto</a></li>
-				</ul>
+		<header id="contenedor-header">
+			<nav class="navbar rosa navbar-expand-lg navbar-light">
+				<a class="navbar-brand" href="index.html"><img src="img/logo-pibasarcilla.svg" alt="logo-pibasenlaarcilla"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				  <span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+				  <ul class="navbar-nav">
+					<li class="nav-item">
+					  <a class="nav-link" href="expo2020.html">expo 2020</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="talleres.html">talleres</a>
+					</li>
+					<li class="li-brand">
+				 	 <a class="nav-link" href="index.html"><img src="img/logo-pibasarcilla.svg" alt="logo-pibasenlaarcilla"></a>
+				 	</li>
+					<li class="nav-item">
+						<a class="nav-link" href="shop.html">shop</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contacto.html">contacto</a>
+					</li>
+				  </ul>
+				</div>
 			</nav>
 		</header>
 		<!--BIENVENIDA-->
 			<section class="fondo-rosa-inicio">
 				<article class="index-foto">
-					<img id="izquierda-1" src="img/home/polaroid-index-1.png">
-					<img id="izquierda-2" src="img/home/polaroid-index-2.png">
+					<img id="izquierda-1" src="img/home/polaroid-index-1.png" alt="chica sonriente mirando a cara con piezas de arcilla">
+					<img id="izquierda-2" src="img/home/polaroid-index-2.png" alt="chica riendo mientras trabaj en el torno">
 				</article>
 				<article class="texto-bienvenida">
 					<h1 class="tracking-in-expand">Almas de la tierra</h1>
 					<p class="subtitulo-azul tracking-in-expand">unidas para seguir creciendo</p>
 					<p class="index-texto scale-in-ver-top">Somos un colectivo de mujeres argentinas que trabajan la ceramica de manera autogestiva e independiente. Organizamos encuentros que nos forman.
 					</p>
-					<a href="exposiciones.html" class="boton-azul">Conocé la edición 2020</a>					
+					<a href="expo2020.html" class="boton-azul">Conocé la edición 2020</a>					
 				</article>
 				<article class="index-foto">
-					<img id="derecha-1" src="img/home/polaroid-index-3.png">
-					<img id="derecha-2" src=img/home/polaroid-index-4.png>
+					<img id="derecha-1" src="img/home/polaroid-index-3.png" alt="chica llenando el horno de piezas ceramicas">
+					<img id="derecha-2" src=img/home/polaroid-index-4.png alt="chica riendo mientras trabaj en el torno">
 				</article>
 			</section>
 
 		<!--POR QUE NACIO-->
 			<section class="nacimiento">
-				<img src="img/home/mujeres-ceramistas.jpg">
+				<img src="img/home/mujeres-ceramistas.jpg" alt="ilustracion de muchas mujeres trabajando la arcilla y piezas ceramicas">
 				<article class="titulo-nacimiento">
 					<h1>¿Por qué nació Pibas en la arcilla?</h1>
 					<p>Una manada fiel como el gres</p>
@@ -73,29 +90,31 @@
 		<section class="quienes-somos">
 			<h1>Quienes son estas Pibas</h1>
 			<p class="subtitulo-rosa">Amigas y colegas que hicieron este proyecto posible</p>
-			<article>
-				<div>
-					<img src="img/home/piba1.jpg">
+			<div class="container">
+			<article class="row d-flex flex-wrap flex-md-wrap flex-lg-nowrap flex-xl-nowrap justify-content-around">
+				<div class="col-12 col-sm-10 mr-sm-0 col-md-5 mb-sm-4 mr-md-2 col-lg-4 mr-lg-4">
+					<img src="img/home/piba1.jpg" alt="foto de pieza ceramica de juli">
 					<h2 class="titulo-almendra-coral">Libre</h2>
 					<p class="subtitulo-azul-chico"> por Juli</p>
 					<p class="descripcion-artista">Soy diseñadora grafica pero hace unos años que comparto mi amor con la cerámica. Así es como desarrolle mi proyecto "Libre".</p>
-					<a class="boton-azul" href="https://www.instagram.com/libreceramica/">Conoce más de Libre</a>
+					<a class="boton-azul" href="https://www.instagram.com/libreceramica/" target="_blank">Conoce más de Libre</a>
 				</div>
-				<div>
-					<img src="img/home/piba2.jpg">
+				<div class="col-12 col-sm-10 mr-sm-0 col-md-5 mb-sm-4 mr-md-2 col-lg-4 mr-lg-4">
+					<img src="img/home/piba2.jpg" alt="foto de pieza ceramica utlitarias de pecco">
 					<h2 class="titulo-almendra-coral">Somos SUD</h2>
 					<p class="subtitulo-azul-chico"> por Sara, Luisa y Marti</p>
 					<p class="descripcion-artista">Diseñamos y producimos desde Argentina objetos para el día a día de tu hogar. Nos inspira la naturaleza: sus formas, texturas y colores.</p>
-					<a class="boton-azul" href="https://www.instagram.com/libreceramica/">Conoce más de Sud</a>
+					<a class="boton-azul" href="https://www.instagram.com/holasud/" target="_blank">Conoce más de Sud</a>
 				</div>
-				<div>
-					<img src="img/home/piba3.jpg">
+				<div class="col-12 col-sm-10 mr-sm-0 col-md-5 mb-sm-4 col-lg-4">
+					<img src="img/home/piba3.jpg" alt="foto de pieza ceramica de juli">
 					<h2 class="titulo-almendra-coral">Pecco</h2>
 					<p class="subtitulo-azul-chico"> por Carla y Mali</p>
 					<p class="descripcion-artista">Tratamos de volcar nuestras experiencias y aprendizajes para dar forma a un estilo que es simple, lineal, con colores neutros pero cálidos.</p>
-					<a class="boton-azul" href="https://www.instagram.com/pecco.objetos/?hl=es-la">Conoce más de Pecco</a>
+					<a class="boton-azul" href="https://www.instagram.com/pecco.objetos/?hl=es-la" target="_blank">Conoce más de Pecco</a>
 				</div>
 			</article>
+			</div>
 		</section>
 
 		<!--POR QUE HACER CERAMICA-->
@@ -103,32 +122,32 @@
 			<h1>¿Por qué hacer cerámica?</h1>
 			<div>
 				<article>
-					<img src="img/home/ilus-1.png">
+					<img src="img/home/ilus-1.png" alt="ilustracion manos experimentando en el mundo">
 					<h2>Experimentación</h2>
 					<p>Te ayuda a ser espontánea y a divertirte. El material solo te lleva a crear nuevos mundos.</p>
 				</article>
 				<article>
-					<img src="img/home/ilus-2.png">
+					<img src="img/home/ilus-2.png" alt="ilustracion de taza y jarrones ceramicos">
 					<h2>Ser creadora</h2>
 					<p>Me re-encuentro con mi perseverancia, mi autoliderazgo, motivación y compromiso.</p>
 				</article>
 				<article>
-					<img src="img/home/ilus-3.png">
+					<img src="img/home/ilus-3.png" alt="ilustracion de rostro relajado">
 					<h2>Reduce el estrés</h2>
 					<p>La forma de trabajar y su concentracion te llevan a un estado de relajacion general.</p>
 				</article>
 				<article>
-					<img src="img/home/ilus-4.png">
+					<img src="img/home/ilus-4.png" alt="ilustracion de pies hechando raices en la tierra">
 					<h2>Tu cable a tierra</h2>
 					<p>Con las manos focalizadas en la arcilla, la ansiedad y el contacto con el exterior desaparecen.</p>
 				</article>
 				<article>
-					<img src="img/home/ilus-5.png">
+					<img src="img/home/ilus-5.png" alt="ilustracion de lineas enredadas de la que surgen piezas ceramicas">
 					<h2>Tus emociones, esculturas</h2>
 					<p>Activas tu creatividad y esta energía creativa luego se traslada a toda la vida del que lo practica.</p>
 				</article>
 				<article>
-					<img src="img/home/ilus-6.png">
+					<img src="img/home/ilus-6.png" alt="ilustracion de manos uniendose en un punto">
 					<h2>Nuevo grupo humano</h2>
 					<p>El ambiente informal ayuda a relajar los problemas de ansiedad social, entre charlas y mates.</p>
 				</article>
@@ -169,7 +188,7 @@
 				</div>
 			</section>
 			<hr class="separador-gris">
-			<p id="disenado-por">Diseñado por Julia Prinzo · 2020</p>
+			<p id="disenado-por">Diseñado por Julia Prinzo · 2020 · Las imágenes no son de mi autoria · La información utilizada no es real</p>
 		</footer>
 		<!--FIN-FOOTER-->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
