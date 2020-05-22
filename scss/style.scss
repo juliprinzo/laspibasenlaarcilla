@@ -1323,21 +1323,7 @@ a.nav-link{
 	background-size: cover; 
     text-align: center;
     height: 750px;
-    &:hover{
-        background-image: url("../img/exposicion/fondo-expo-azul.jpg");
-        h1,p{
-            color: $azul;
-        }
-        a{
-            background-color: $azul;
-            &:hover{
-                color: $azul;
-                border: 2px solid $azul;
-                text-decoration: none;
-                background-color:transparent;
-            }
-        }
-    }
+
     #expo-titulo-head {
         margin-top: 80px;
         p{

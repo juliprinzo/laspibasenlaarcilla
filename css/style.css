@@ -1564,25 +1564,6 @@ a.nav-link img {
   height: 750px;
 }
 
-.fondo-rosa-expo:hover {
-  background-image: url("../img/exposicion/fondo-expo-azul.jpg");
-}
-
-.fondo-rosa-expo:hover h1, .fondo-rosa-expo:hover p {
-  color: #63798a;
-}
-
-.fondo-rosa-expo:hover a {
-  background-color: #63798a;
-}
-
-.fondo-rosa-expo:hover a:hover {
-  color: #63798a;
-  border: 2px solid #63798a;
-  text-decoration: none;
-  background-color: transparent;
-}
-
 .fondo-rosa-expo #expo-titulo-head {
   margin-top: 80px;
 }
