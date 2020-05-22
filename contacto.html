@@ -63,24 +63,24 @@
 					</div>
 				</article>
 				<fieldset>
-				<form id="formulario">
+				<form id="formulario" action="contact.php" method="post">
 						<div class="formulario-nombre row">
 						  <div class="col-sm-12 col-md-6 col-lg-6">
-							<label class="formulario-label" for="exampleInputEmail1">Nombre</label>
+							<label class="formulario-label" for="exampleInputEmail1" name=”cf_name”>Nombre</label>
 							<input type="text" class="form-control" placeholder="Laura">
 						  </div>
 						  <div class="col-sm-12 col-md-6 col-lg-6">
-							<label class="formulario-label" for="exampleInputEmail1">Apellido</label>
+							<label class="formulario-label" for="exampleInputEmail1" name=”cf_email”>Apellido</label>
 							<input type="text" class="form-control" placeholder="Gonzalez">
 						  </div>
 						</div>
 						<div class="form-group">
-							<label class="formulario-label" for="exampleInputEmail1">Email</label>
+							<label class="formulario-label" for="exampleInputEmail1" name=”cf_message”>Email</label>
 							<input type="email" class="form-control" placeholder="lauragonzalez@correo.com" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
 						</div>
 						<div class="form-group">
 							<label class="formulario-label" for="exampleFormControlTextarea1">¿Qué nos querés decir?</label>
-							<textarea class="form-control" placeholder="Escribí acá..." id="exampleFormControlTextarea1" rows="3"></textarea>
+							<textarea class="form-control" placeholder="Escribí acá..." id="exampleFormControlTextarea1" rows="3" name=”cf_message”></textarea>
 						</div>
 						<div class="form-group botonera">
 							<div class="form-check">
