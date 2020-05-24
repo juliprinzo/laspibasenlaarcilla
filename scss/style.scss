@@ -33,11 +33,12 @@ h2{
 
 h3{
 	font-family: $open;
-	font-size: $font-size/3;
+	font-size: ($font-size/2)-6px;
 	font-weight: bold;
 }
 
-p{
+p{  
+    font-size: ($font-size/2)-7px;
 	color: $gris;
     font-family: $open;
     line-height: 130%;
@@ -128,7 +129,7 @@ $h2-open: "open-coral" $coral , "open-azul" $azul, "open-blanco" $neutro;
 .titulo-chico-coral{
 	color: $coral;
 	text-transform: uppercase;
-	font-size: 80%;
+	font-size: 90%;
 	font-family: $open;
 	font-weight: bold;
 	margin-bottom: 2%;
@@ -161,7 +162,7 @@ $subtitulos: "rosa" $rosa , "azul" $azul, "coral" $coral;
 	color:$azul;
 	font-family: $open;
 	font-weight: bold;
-	font-size: 12px;
+	font-size: 14px;
 	letter-spacing: 2px;
 	text-transform: uppercase;
 	margin:0;
@@ -499,7 +500,7 @@ a.nav-link{
 	width: 600px;
 	align-self:center;
 	margin-top:8%;
-    padding: 5%;
+    padding: 3%;
     h1{
         color:$azul;
         margin: 0;
@@ -509,6 +510,7 @@ a.nav-link{
     }
     .index-texto{
         padding-top: 2%;
+        font-size: 120%;
     }
 }
 
@@ -546,7 +548,7 @@ a.nav-link{
 	background-color: $neutro;
 	padding: 8% 20% 10% 20%;
 	display: grid;
-	grid-template-columns: 2fr 1fr;
+	grid-template-columns: 5fr 3fr;
 	grid-row: repeat (3, 1fr);
 	justify-content: space-between;
 	align-content: space-between;
@@ -556,7 +558,7 @@ a.nav-link{
     'ilustracion caja';
     img{
         grid-area: ilustracion;
-        width: 70%;
+        width: 82%;
         align-self: end;
     }
 }
@@ -581,16 +583,13 @@ a.nav-link{
 .cajon-nacimiento{
 	grid-area: caja;
 	background-color: $rosa;
-	padding: 15% 15% 10% 15%;
+	padding: 12% 12% 10% 12%;
 	margin: 5% 0% 5% 0%;
     border-radius: 0.3em;
     h3{
         color:$coral;
         padding-bottom: 0%;
-        line-height: 20px;
-    }
-    p{
-        line-height: 20px;
+        line-height: 22px;
     }
     .razon-nacimiento{
         margin-bottom: 10%;
@@ -662,7 +661,7 @@ a.nav-link{
             margin-bottom: 3%;
             h2{
                 color:$azul;
-                font-size: 105%;
+                font-size: 110%;
                 letter-spacing: 0.5px;
                 margin-bottom: 2%;
                 line-height: 120%;
@@ -927,12 +926,19 @@ a.nav-link{
 
 
  .fondo-rosa{
-	background-image: url("../img/fondo.jpg");
+	background-image: url("../img/talleres/head-talleres.jpg");
 	background-color: $rosa;
-	padding:18% 20% 10% 20%;
 	background-repeat: no-repeat;
 	background-size: cover; 
-	text-align: center;
+    text-align: center;
+    padding:10% 0% 9% 0%;
+    img{
+        width: 70%;
+        margin-bottom: 3%;
+    }
+    section{
+        padding:0% 22% 0% 22%;
+    }
  }
 
  #talleres-titulo p{
@@ -941,13 +947,14 @@ a.nav-link{
 }
 
 #talleres-inicio{
-	margin-top: 5%;
+	margin-top: 3%;
 	display: flex;
 	flex-flow: row wrap;
 	align-items: baseline;
-    justify-content: space-around;
+    justify-content: center;
     div{
-        width: 380px;
+        width: 360px;
+        margin-right: 2%;
         margin-bottom: 10px;
         padding: 4% 0% 4% 0%;
         background-color: $neutro;
@@ -965,7 +972,6 @@ a.nav-link{
         }
         a{
            width: auto;
-            font-size: 70%;
             padding: 6px 12px 6px 12px;
         }
     }
@@ -1025,7 +1031,8 @@ a.nav-link{
 .talleres-items{
     margin-left: 6%;
 	font-family: $open;
-	line-height: 140%;
+    line-height: 140%;
+    font-size: 110%;
 	color: $coral;
 	list-style-type: circle;
 	list-style-image: url('../img/talleres/tick.png');
@@ -1049,7 +1056,7 @@ a.nav-link{
     p{
         padding-top: 1%;
         padding-bottom: 7%;
-        font-size: 90%;
+        font-size: 100%;
         line-height: 120%;
     }
     
@@ -1110,7 +1117,8 @@ a.nav-link{
         border-radius: 0.3rem;
         h3{
             font-family: 'almendra', serif;
-            font-size: 120%;
+            font-size: 140%;
+            margin-bottom: 0;
             color: $neutro;
             top: 0;
             left: 0;
@@ -1121,7 +1129,7 @@ a.nav-link{
             font-family: $open;
             letter-spacing: 1px;
             text-transform: uppercase;
-            font-size: 80%;
+            font-size: 100%;
             color: $neutro;
             top: 0;
             left: 0;
@@ -1176,6 +1184,9 @@ a.nav-link{
     #workshops-expo2020{
         padding: 12% 5% 5% 5%;
         background-color:$azul;
+        .destacado-almendra{
+            margin-top: 2%;
+        }
     }
     .talleres-ilus{
         width: 70%;
@@ -1218,11 +1229,10 @@ a.nav-link{
 }
 
 #subtitulo-expo2020 p{
-	font-size: 130%;
 	font-family: $open;
 	color: $neutro;
-	font-size: 110%;
-	letter-spacing: 1px;
+	font-size: 115%;
+	letter-spacing: 0.5px;
 	margin-bottom: 3%;
 	margin-top: 3%;
 	text-align: center;
@@ -1237,7 +1247,7 @@ a.nav-link{
     a{
         margin-top: 2%;
         width: auto;
-         font-size: 70%;
+         font-size: 80%;
          padding: 6px 12px 6px 12px;
      }
      div{
@@ -1280,7 +1290,7 @@ a.nav-link{
 	font-family: $open;
 	text-transform: uppercase;
 	font-weight: bold;
-	font-size: 80%;
+	font-size: 90%;
 	letter-spacing: 1px;
 	color:$azul;
     margin-bottom: 2%;
@@ -1293,7 +1303,7 @@ a.nav-link{
 
 .taller-expo-fecha{
 	font-family: $open;
-	font-size: 90%;
+	font-size: 100%;
 	letter-spacing: 1px;
 	color:$coral;
 }
@@ -1307,7 +1317,7 @@ a.nav-link{
 	color:$neutro;
 	font-size: 200%;
 	text-align: center;
-	margin-top: 7%;
+	margin-top: 3%;
 }
 
 
@@ -1343,13 +1353,12 @@ a.nav-link{
     text-align: center;
     .subtitulo-coral{
         margin-top: 1%;
-        margin-bottom: 3%;
+        margin-bottom: 2%;
     }
     .parrafo-exposicion{
         font-family: $open;
         color: $gris;
         font-size: 105%;
-        letter-spacing: 0.5px;
         line-height: 140%;
         margin-bottom: 4%;
         text-align: center;
@@ -1642,11 +1651,11 @@ a.nav-link{
 	justify-content: space-around;
     align-items: baseline;
     article{
-        width: 350px;
+        width: 370px;
         text-align: center;
         div {
             h2{
-            font-size: 150%;
+            font-size: 160%;
             margin-bottom: 1%;
             }
             p{
@@ -1708,7 +1717,7 @@ a.nav-link{
                 padding: 0%;
             }
             img{
-                width: 70%;
+                width: 60%;
                 margin-bottom: 8%;
             }
         }
@@ -1921,7 +1930,15 @@ footer {
         font-size: ($font-size)-15px; 
     }
     p{
-        font-size: ($font-size)-35px; 
+        font-size: ($font-size)-30px; 
+        line-height: 130%;
+    }
+    h3{
+        font-size: ($font-size/2)-5px;
+        line-height: 130%;
+    }
+    .subtitulo-azul {
+        font-size: 15px;
     }
 
     .navbar{
@@ -2036,8 +2053,21 @@ footer {
          }
     }
     .fondo-rosa{
-        padding: 20% 10% 20% 10%;
-    }
+        padding:5% 0% 9% 0%;
+        background-repeat: no-repeat;
+        background-size: 250% auto;
+        background-position: center;
+        img{
+            display: none;
+        }
+        section{
+            padding:0% 10% 0% 10%;
+        }
+        #talleres-inicio {
+            div {
+            padding: 10% 0% 10% 0%;}
+        }
+     }
     #workshops-expo{
         padding: 0% 0% 0% 0%;
     }
@@ -2079,9 +2109,11 @@ footer {
 
     .fondo-rosa-expo{
         padding:15% 8% 15% 8%;
-        background-size: cover;
+        background-repeat: no-repeat;
+        background-size: 350% auto;
+        background-position: center;
         text-align: center;
-        height: 550px;
+        height: 450px;
         #expo-titulo-head {
             text-shadow: 0px 0px 20px rgb(243, 239, 239);
             margin-top: 30%;
@@ -2387,7 +2419,7 @@ footer {
 
 }
 
-@media only screen and (min-width:601px) and (max-width:1024px){
+@media only screen and (min-width:600px) and (max-width:1024px){
     .navbar{
         position: static;
         width: 100%;
@@ -2396,6 +2428,15 @@ footer {
     .navbar-collapse .navbar-nav {
         width: 100%;
         flex-flow: row;
+    }
+
+    .subtitulo-azul {
+        font-size: 15px;
+    }
+
+    h3{
+        font-size: ($font-size/2)-5px;
+        line-height: 130%;
     }
 
     .fondo-rosa-inicio {
@@ -2490,7 +2531,17 @@ footer {
     }
 
     .fondo-rosa{
-        padding:8% 10% 8% 10%;
+        padding:5% 0% 9% 0%;
+        background-repeat: no-repeat;
+        background-size: 120% auto;
+        background-position: center;
+        section{
+            padding:0% 17% 0% 17%;
+        }
+        #talleres-inicio {
+            div {
+            padding: 8% 2% 8% 2%;}
+        }
      }
 
     #talleres-disponibles{
@@ -2508,9 +2559,10 @@ footer {
 
     .fondo-rosa-expo{
         padding:15% 20% 25% 20%;
-        background-size: contain;
         background-repeat: no-repeat;
-        height: 450px;
+        background-size: 100% auto;
+        background-position: center;
+        height: 350px;
         #expo-titulo-head {
             margin-top: 0%;
         }
@@ -2702,7 +2754,7 @@ footer {
     }
 }
 
-@media only screen and (min-width:1024px) and (max-width:1200px){
+@media only screen and (min-width:1024px) and (max-width:1366px){
    
     h1{
         font-size: ($font-size)-5px; 
@@ -2712,7 +2764,7 @@ footer {
     }
 
     .navbar{
-       
+        position: absolute;
         width: 100%;
     }
 
@@ -2756,9 +2808,21 @@ footer {
     }
 
     .fondo-rosa{
-        padding:18% 10% 10% 10%;
+        padding:5% 0% 9% 0%;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: center;
+        section{
+            padding:0% 20% 0% 20%;
+        }
      }
-    
+     #talleres-inicio{
+        flex-flow: row nowrap;
+        div{
+            margin-right: 20px;
+            padding: 1% 0% 1% 0%;}
+        }
+
     #talleres-disponibles{
         padding: 10% 8% 5% 8%;
         article.anuales{
@@ -2797,7 +2861,7 @@ footer {
 
     #entradas-flex{
         article{
-            width: 50%;
+            width: 45%;
             text-align: center;
             .precio-producto{
                 font-size: 350%;

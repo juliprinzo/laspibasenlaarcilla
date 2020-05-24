@@ -22,11 +22,12 @@ h2 {
 
 h3 {
   font-family: "open-sans", sans-serif;
-  font-size: 16.66667px;
+  font-size: 19px;
   font-weight: bold;
 }
 
 p {
+  font-size: 18px;
   color: #948f8d;
   font-family: "open-sans", sans-serif;
   line-height: 130%;
@@ -142,7 +143,7 @@ p {
 .titulo-chico-coral {
   color: #f69380;
   text-transform: uppercase;
-  font-size: 80%;
+  font-size: 90%;
   font-family: "open-sans", sans-serif;
   font-weight: bold;
   margin-bottom: 2%;
@@ -188,7 +189,7 @@ p {
   color: #63798a;
   font-family: "open-sans", sans-serif;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 2px;
   text-transform: uppercase;
   margin: 0;
@@ -570,7 +571,7 @@ a.nav-link img {
       -ms-grid-row-align: center;
       align-self: center;
   margin-top: 8%;
-  padding: 5%;
+  padding: 3%;
 }
 
 .texto-bienvenida h1 {
@@ -584,6 +585,7 @@ a.nav-link img {
 
 .texto-bienvenida .index-texto {
   padding-top: 2%;
+  font-size: 120%;
 }
 
 .index-foto {
@@ -624,8 +626,8 @@ a.nav-link img {
   padding: 8% 20% 10% 20%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 2fr 1fr;
-      grid-template-columns: 2fr 1fr;
+  -ms-grid-columns: 5fr 3fr;
+      grid-template-columns: 5fr 3fr;
   grid-row: repeat 3, 1fr;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -640,7 +642,7 @@ a.nav-link img {
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
   grid-area: ilustracion;
-  width: 70%;
+  width: 82%;
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
       align-self: end;
@@ -673,7 +675,7 @@ a.nav-link img {
   -ms-grid-column: 2;
   grid-area: caja;
   background-color: #fcdbd7;
-  padding: 15% 15% 10% 15%;
+  padding: 12% 12% 10% 12%;
   margin: 5% 0% 5% 0%;
   border-radius: 0.3em;
 }
@@ -681,11 +683,7 @@ a.nav-link img {
 .cajon-nacimiento h3 {
   color: #f69380;
   padding-bottom: 0%;
-  line-height: 20px;
-}
-
-.cajon-nacimiento p {
-  line-height: 20px;
+  line-height: 22px;
 }
 
 .cajon-nacimiento .razon-nacimiento {
@@ -777,7 +775,7 @@ a.nav-link img {
 
 .hacer-ceramica div article h2 {
   color: #63798a;
-  font-size: 105%;
+  font-size: 110%;
   letter-spacing: 0.5px;
   margin-bottom: 2%;
   line-height: 120%;
@@ -1124,12 +1122,21 @@ a.nav-link img {
 /****************ESTILOS-TALLERES***************/
 /*INICIO*/
 .fondo-rosa {
-  background-image: url("../img/fondo.jpg");
+  background-image: url("../img/talleres/head-talleres.jpg");
   background-color: #fcdbd7;
-  padding: 18% 20% 10% 20%;
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
+  padding: 10% 0% 9% 0%;
+}
+
+.fondo-rosa img {
+  width: 70%;
+  margin-bottom: 3%;
+}
+
+.fondo-rosa section {
+  padding: 0% 22% 0% 22%;
 }
 
 #talleres-titulo p {
@@ -1138,7 +1145,7 @@ a.nav-link img {
 }
 
 #talleres-inicio {
-  margin-top: 5%;
+  margin-top: 3%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1149,12 +1156,14 @@ a.nav-link img {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #talleres-inicio div {
-  width: 380px;
+  width: 360px;
+  margin-right: 2%;
   margin-bottom: 10px;
   padding: 4% 0% 4% 0%;
   background-color: #eeece8;
@@ -1177,7 +1186,6 @@ a.nav-link img {
 
 #talleres-inicio div a {
   width: auto;
-  font-size: 70%;
   padding: 6px 12px 6px 12px;
 }
 
@@ -1248,6 +1256,7 @@ a.nav-link img {
   margin-left: 6%;
   font-family: "open-sans", sans-serif;
   line-height: 140%;
+  font-size: 110%;
   color: #f69380;
   list-style-type: circle;
   list-style-image: url("../img/talleres/tick.png");
@@ -1270,7 +1279,7 @@ a.nav-link img {
 .opcion-anuales p {
   padding-top: 1%;
   padding-bottom: 7%;
-  font-size: 90%;
+  font-size: 100%;
   line-height: 120%;
 }
 
@@ -1341,7 +1350,8 @@ a.nav-link img {
 
 .workshop-1 div h3 {
   font-family: 'almendra', serif;
-  font-size: 120%;
+  font-size: 140%;
+  margin-bottom: 0;
   color: #eeece8;
   top: 0;
   left: 0;
@@ -1353,7 +1363,7 @@ a.nav-link img {
   font-family: "open-sans", sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
-  font-size: 80%;
+  font-size: 100%;
   color: #eeece8;
   top: 0;
   left: 0;
@@ -1401,6 +1411,9 @@ a.nav-link img {
   #workshops-expo2020 {
     padding: 12% 5% 5% 5%;
     background-color: #63798a;
+  }
+  #workshops-expo2020 .destacado-almendra {
+    margin-top: 2%;
   }
   .talleres-ilus {
     width: 70%;
@@ -1451,11 +1464,10 @@ a.nav-link img {
 }
 
 #subtitulo-expo2020 p {
-  font-size: 130%;
   font-family: "open-sans", sans-serif;
   color: #eeece8;
-  font-size: 110%;
-  letter-spacing: 1px;
+  font-size: 115%;
+  letter-spacing: 0.5px;
   margin-bottom: 3%;
   margin-top: 3%;
   text-align: center;
@@ -1478,7 +1490,7 @@ a.nav-link img {
 #expo-talleres a {
   margin-top: 2%;
   width: auto;
-  font-size: 70%;
+  font-size: 80%;
   padding: 6px 12px 6px 12px;
 }
 
@@ -1523,7 +1535,7 @@ a.nav-link img {
   font-family: "open-sans", sans-serif;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 80%;
+  font-size: 90%;
   letter-spacing: 1px;
   color: #63798a;
   margin-bottom: 2%;
@@ -1536,7 +1548,7 @@ a.nav-link img {
 
 .taller-expo-fecha {
   font-family: "open-sans", sans-serif;
-  font-size: 90%;
+  font-size: 100%;
   letter-spacing: 1px;
   color: #f69380;
 }
@@ -1550,7 +1562,7 @@ a.nav-link img {
   color: #eeece8;
   font-size: 200%;
   text-align: center;
-  margin-top: 7%;
+  margin-top: 3%;
 }
 
 /****************ESTILOS-EXPOSICIONES***************/
@@ -1582,14 +1594,13 @@ a.nav-link img {
 
 .fondo-claro .subtitulo-coral {
   margin-top: 1%;
-  margin-bottom: 3%;
+  margin-bottom: 2%;
 }
 
 .fondo-claro .parrafo-exposicion {
   font-family: "open-sans", sans-serif;
   color: #948f8d;
   font-size: 105%;
-  letter-spacing: 0.5px;
   line-height: 140%;
   margin-bottom: 4%;
   text-align: center;
@@ -1944,12 +1955,12 @@ a.nav-link img {
 }
 
 #entradas-flex article {
-  width: 350px;
+  width: 370px;
   text-align: center;
 }
 
 #entradas-flex article div h2 {
-  font-size: 150%;
+  font-size: 160%;
   margin-bottom: 1%;
 }
 
@@ -2028,7 +2039,7 @@ a.nav-link img {
 }
 
 #contacto #contacto-flex #contacto-caja-texto img {
-  width: 70%;
+  width: 60%;
   margin-bottom: 8%;
 }
 
@@ -2292,6 +2303,14 @@ footer {
     font-size: 35px;
   }
   p {
+    font-size: 20px;
+    line-height: 130%;
+  }
+  h3 {
+    font-size: 20px;
+    line-height: 130%;
+  }
+  .subtitulo-azul {
     font-size: 15px;
   }
   .navbar {
@@ -2424,7 +2443,19 @@ footer {
     margin-top: 20px;
   }
   .fondo-rosa {
-    padding: 20% 10% 20% 10%;
+    padding: 5% 0% 9% 0%;
+    background-repeat: no-repeat;
+    background-size: 250% auto;
+    background-position: center;
+  }
+  .fondo-rosa img {
+    display: none;
+  }
+  .fondo-rosa section {
+    padding: 0% 10% 0% 10%;
+  }
+  .fondo-rosa #talleres-inicio div {
+    padding: 10% 0% 10% 0%;
   }
   #workshops-expo {
     padding: 0% 0% 0% 0%;
@@ -2469,9 +2500,11 @@ footer {
   }
   .fondo-rosa-expo {
     padding: 15% 8% 15% 8%;
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 350% auto;
+    background-position: center;
     text-align: center;
-    height: 550px;
+    height: 450px;
   }
   .fondo-rosa-expo #expo-titulo-head {
     text-shadow: 0px 0px 20px #f3efef;
@@ -2800,7 +2833,7 @@ footer {
   }
 }
 
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
   .navbar {
     position: static;
     width: 100%;
@@ -2811,6 +2844,13 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
             flex-flow: row;
+  }
+  .subtitulo-azul {
+    font-size: 15px;
+  }
+  h3 {
+    font-size: 20px;
+    line-height: 130%;
   }
   .fondo-rosa-inicio {
     height: 450px;
@@ -2912,7 +2952,16 @@ footer {
         justify-content: space-around;
   }
   .fondo-rosa {
-    padding: 8% 10% 8% 10%;
+    padding: 5% 0% 9% 0%;
+    background-repeat: no-repeat;
+    background-size: 120% auto;
+    background-position: center;
+  }
+  .fondo-rosa section {
+    padding: 0% 17% 0% 17%;
+  }
+  .fondo-rosa #talleres-inicio div {
+    padding: 8% 2% 8% 2%;
   }
   #talleres-disponibles {
     padding: 10% 8% 10% 8%;
@@ -2925,9 +2974,10 @@ footer {
   }
   .fondo-rosa-expo {
     padding: 15% 20% 25% 20%;
-    background-size: contain;
     background-repeat: no-repeat;
-    height: 450px;
+    background-size: 100% auto;
+    background-position: center;
+    height: 350px;
   }
   .fondo-rosa-expo #expo-titulo-head {
     margin-top: 0%;
@@ -3133,7 +3183,7 @@ footer {
   }
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
   h1 {
     font-size: 45px;
   }
@@ -3141,6 +3191,7 @@ footer {
     font-size: 18px;
   }
   .navbar {
+    position: absolute;
     width: 100%;
   }
   .fondo-rosa-inicio {
@@ -3182,7 +3233,23 @@ footer {
     margin-top: 150px;
   }
   .fondo-rosa {
-    padding: 18% 10% 10% 10%;
+    padding: 5% 0% 9% 0%;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+  }
+  .fondo-rosa section {
+    padding: 0% 20% 0% 20%;
+  }
+  #talleres-inicio {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+  }
+  #talleres-inicio div {
+    margin-right: 20px;
+    padding: 1% 0% 1% 0%;
   }
   #talleres-disponibles {
     padding: 10% 8% 5% 8%;
@@ -3214,7 +3281,7 @@ footer {
     margin-right: 2%;
   }
   #entradas-flex article {
-    width: 50%;
+    width: 45%;
     text-align: center;
   }
   #entradas-flex article .precio-producto {
