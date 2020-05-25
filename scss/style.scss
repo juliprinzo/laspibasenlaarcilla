@@ -184,8 +184,13 @@ $subtitulos: "rosa" $rosa , "azul" $azul, "coral" $coral;
 
  .tracking-in-expand {
 	-webkit-animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-	        animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+            animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+            visibility: visible;
 }
+
+.element-to-hide{
+    visibility:hidden; 
+} 
 
 @-webkit-keyframes tracking-in-expand {
 	0% {
@@ -251,7 +256,70 @@ $subtitulos: "rosa" $rosa , "azul" $azul, "coral" $coral;
 	}
   }
   
-
+/* Bob */
+@-webkit-keyframes hvr-bob {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+@keyframes hvr-bob {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+@-webkit-keyframes hvr-bob-float {
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+@keyframes hvr-bob-float {
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+.hvr-bob {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-bob:hover, .hvr-bob:focus, .hvr-bob:active {
+  -webkit-animation-name: hvr-bob-float, hvr-bob;
+  animation-name: hvr-bob-float, hvr-bob;
+  -webkit-animation-duration: .3s, 1.5s;
+  animation-duration: .3s, 1.5s;
+  -webkit-animation-delay: 0s, .3s;
+  animation-delay: 0s, .3s;
+  -webkit-animation-timing-function: ease-out, ease-in-out;
+  animation-timing-function: ease-out, ease-in-out;
+  -webkit-animation-iteration-count: 1, infinite;
+  animation-iteration-count: 1, infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: normal, alternate;
+  animation-direction: normal, alternate;
+}
 
  /**********botones*******/
 
@@ -303,7 +371,7 @@ $subtitulos: "rosa" $rosa , "azul" $azul, "coral" $coral;
 	text-transform: uppercase;
 	font-weight: bold;
 	letter-spacing: 2%;
-	font-size: 60%;
+	font-size: 70%;
 	text-decoration: none;
 	display: inline-block;
 	border-radius: 2em;
@@ -390,7 +458,7 @@ a.nav-link{
     text-transform: uppercase;
     text-decoration: none;
     color: $coral;
-    font-size: 100%;
+    font-size: 120%;
    letter-spacing: 1px;
     transition: color 0.2s ease-in-out;
     &:hover {color:$azul;}
@@ -497,7 +565,7 @@ a.nav-link{
 }
 
 .texto-bienvenida{
-	width: 600px;
+	width: 700px;
 	align-self:center;
 	margin-top:8%;
     padding: 3%;
@@ -510,7 +578,7 @@ a.nav-link{
     }
     .index-texto{
         padding-top: 2%;
-        font-size: 120%;
+        font-size: 130%;
     }
 }
 
@@ -715,6 +783,9 @@ a.nav-link{
             font-size: 90%;
             width: 80%;
             margin-bottom: 7%;
+            &:focus {
+                outline: none;
+                }
             img{
                 margin-right: 5%;
                 width: 10%;
@@ -760,7 +831,7 @@ a.nav-link{
     a{
         color: $azul;
         text-transform: uppercase;
-        font-size: 80%;
+        font-size: 100%;
         font-family: $open;
         font-weight: bold;
         margin-bottom: 5%;
@@ -778,7 +849,10 @@ a.nav-link{
             margin-bottom: 3%;
             font-family: $open;
             font-weight: normal;
-            font-size: 80%;
+            font-size: 95%;
+            &:focus {
+                outline: none;
+                }
           }
         
           .badge-light {
@@ -822,6 +896,44 @@ a.nav-link{
 }
 }
 }
+
+.popover {
+    font-family: $open;
+    font-style: normal;
+    text-align: center;
+    font-size: 15px;
+    border: 1px solid #dbd8d0;
+    background-color: $neutro;
+    border-radius: 0.3rem;
+  }
+
+  .bs-popover-top > .arrow::before, .bs-popover-auto[x-placement^="top"] > .arrow::before {
+    bottom: 0;
+    border-width: 0.5rem 0.5rem 0;
+    border-top-color: #dbd8d0;
+  }
+  .bs-popover-top > .arrow::after, .bs-popover-auto[x-placement^="top"] > .arrow::after {
+    bottom: 1px;
+    border-width: 0.5rem 0.5rem 0;
+    border-top-color: $neutro;
+  }
+  .bs-popover-bottom > .arrow::before, .bs-popover-auto[x-placement^="bottom"] > .arrow::before {
+    top: 0;
+    border-width: 0 0.5rem 0.5rem 0.5rem;
+    border-bottom-color: #dbd8d0;
+  }
+  
+  .bs-popover-bottom > .arrow::after, .bs-popover-auto[x-placement^="bottom"] > .arrow::after {
+    top: 1px;
+    border-width: 0 0.5rem 0.5rem 0.5rem;
+    border-bottom-color: $neutro;
+  }
+
+  .popover-body {
+    padding: 0.5rem 0.75rem;
+    color: $azul;
+    font-family: $open;
+  }
 
  /*PRODUCTOS*/
 
@@ -1100,13 +1212,13 @@ a.nav-link{
     img{   
     object-fit: cover;
     display: block;
-    width: 275px;
+    width: 100%;
 	box-shadow: 3px 3px 10px 2px #e0dcd7;
 	border-radius: 0.3rem;
     }
     div{
         position: absolute;
-        width: 275px;
+        width: 100%;
         top:0;
         bottom: 0;
         right: 0;
@@ -1358,7 +1470,7 @@ a.nav-link{
     .parrafo-exposicion{
         font-family: $open;
         color: $gris;
-        font-size: 105%;
+
         line-height: 140%;
         margin-bottom: 4%;
         text-align: center;
@@ -1376,7 +1488,7 @@ a.nav-link{
                 margin-bottom: 4%;
             }
             h2{
-                font-size: 120%;
+                font-size: 140%;
                 letter-spacing: 0.5px;
                 margin-bottom: 5%;
             }
@@ -1583,7 +1695,7 @@ a.nav-link{
         font-family: 'almendra',sans-serif;
         font-weight: bold;
         color: $coral;
-        font-size: 150%;
+        font-size: 170%;
         margin-bottom: 0%;
         padding: 0%;
     }
@@ -1612,7 +1724,7 @@ a.nav-link{
 	font-family: $open;
 	text-transform: uppercase;
 	font-weight: bold;
-	font-size: 80%;
+	font-size: 16px;
 	letter-spacing: 1px;
 	color:$coral;
 	margin-bottom: 1%;
@@ -1683,7 +1795,7 @@ a.nav-link{
  /****************CONTACTO***************/
 
 #contacto{
-	padding: 10% 15% 10% 15%;
+	padding: 8% 15% 10% 15%;
     background-color:$neutro;
     height: 100%;
     #contacto-flex{
@@ -1734,13 +1846,13 @@ a.nav-link{
  /*CONTACTO-form*/
 
 fieldset{
-	width: 60%;
+    width: 60%;
 }
 
 .formulario-label{
 	font-family: $open;
 	font-weight: bold;
-	font-size: 70%;
+	font-size: 90%;
 	color: $azul;
 	letter-spacing: 1px;
 	text-transform: uppercase;
@@ -1761,7 +1873,8 @@ fieldset{
         background-color: #fff;
         border-color: $gris;
         outline: 0;
-        box-shadow: 0 0 0 0.2rem #8EAABC;
+        box-shadow: 0 0 0 0.2rem $azul;
+
       }
     &::placeholder {
         font-family: 'almendra', serif;
@@ -1772,24 +1885,42 @@ fieldset{
 
   
 textarea.form-control{
-	height: 300px;
+	height: 250px;
 }
 
 .botonera{
 	display: flex;
-	justify-content: space-between;
+    justify-content: flex-end;
+    
+    }
+
+.alert{
+     display: none;
 }
+.alert-success {
+    color: $neutro;
+    background-color: $azul;
+    border-color: $azul;
+    font-family: $open;
+    font-size: 120%;
+    .close {
+        color: $neutro;
+        text-shadow: 0 1px 0 #fff;
+        opacity: 1;
+      }
+  }
+
 
 .form-check-label{
 	font-family: $open;
-	font-size: 90%;
+	font-size: 110%;
 	color:$gris;
 }
 
 .btn-primary{
 	font-family: $open;
 	font-weight: bold;
-	font-size: 80%;
+	font-size: 90%;
 	letter-spacing: 1%;
 	color: $neutro;
 	background-color: $azul;
@@ -1823,7 +1954,7 @@ footer {
 	justify-content: space-between;
     margin-bottom: 4%;
     div{
-        width: 160px;
+        width: 170px;
         a:hover{
             color: $coral;
         }
@@ -1834,7 +1965,7 @@ footer {
 .titulo-almendra-gris{
 	font-family: 'almendra', serif;
 	font-weight: bold;
-	font-size: 110%;
+	font-size: 120%;
 	text-decoration: none;
 	color: #cccac8;
 	letter-spacing: 2px;
@@ -1845,7 +1976,7 @@ footer {
 	font-family: $open;
 	font-weight: normal;
 	line-height: 130%;
-	font-size: 90%;
+	font-size: 100%;
 	letter-spacing: 1px;
 	color:#726d6d;
 }
@@ -2764,19 +2895,18 @@ footer {
     }
 
     .navbar{
-        position: absolute;
         width: 100%;
     }
 
 
      .fondo-rosa-inicio {
-        height: 700px;
+        height: 450px;
     }
     
     .texto-bienvenida{
         width: 500px;
         align-self:center;
-        margin-top:8%;
+        margin-top:2%;
         padding: 5%;
     }
     
@@ -2785,25 +2915,25 @@ footer {
         #izquierda-1{
             transform: rotate(-15deg) scale(0.9);
             position: absolute;
-            top: 350px;
+            top: 180px;
             z-index: 1;
         }
         
         #izquierda-2{
             transform: rotate(15deg) translateX(15px) scale(0.9);
-            margin-top: 150px;
+            margin-top: 30px;
         }
         
         #derecha-1{
             transform: rotate(15deg) scale(0.9);
             position: absolute;
-            top: 350px;
+            top: 180px;
             z-index: 1;
         }
         
         #derecha-2{
             transform: rotate(-15deg) translateX(-15px) scale(0.9);
-            margin-top: 150px;
+            margin-top: 30px;
         }
     }
 
@@ -2820,7 +2950,7 @@ footer {
         flex-flow: row nowrap;
         div{
             margin-right: 20px;
-            padding: 1% 0% 1% 0%;}
+            }
         }
 
     #talleres-disponibles{
@@ -2831,12 +2961,13 @@ footer {
     }
 
     .fondo-rosa-expo{
-        padding:15% 8% 15% 8%;
+        padding:10% 8% 15% 8%;
         background-size: fit;
-        height: 550px;
+        height: 450px;
         #expo-titulo-head {
             text-shadow: 0px 0px 20px rgb(243, 239, 239);
-            margin-top: 10%;
+            margin-top: 8%;
+            padding: 0% 15% 0% 15%;
             }
         }
 
@@ -2898,7 +3029,7 @@ footer {
     }
 
     #main-shop{
-        padding: 16% 8% 8% 8%;
+        padding: 8% 8% 8% 8%;
         flex-flow: row nowrap;
         #caja-shop{
             width: 44%;
@@ -2925,6 +3056,25 @@ footer {
                 p{
                     font-size: 200%;
                 }
+            }
+        }
+    }
+
+    #fondo-404{
+        padding: 8% 18% 10% 18%;
+        img{
+            margin-top: 10%;
+        }
+    }
+    footer {
+        background-color: #3a3635;
+        padding: 5% 6% 1% 6%;
+    }
+    #footer-flex{
+        div{
+            width: 170px;
+            a:hover{
+                color: $coral;
             }
         }
     }
