@@ -63,35 +63,36 @@
 						</article>
 					</div>
 				</article>
-				<fieldset>
-				<form action="contactform.php" method="post" id="formulario">
-						<div class="formulario-nombre row">
-						  <div class="col-sm-12 col-md-6 col-lg-6">
-							<label class="formulario-label" for="exampleInputEmail1">Nombre</label>
-							<input name="name" type="text" class="form-control" placeholder="Laura">
-						  </div>
-						  <div class="col-sm-12 col-md-6 col-lg-6">
-							<label class="formulario-label" for="exampleInputEmail1">Apellido</label>
-							<input name="surname" type="text" class="form-control" placeholder="Gonzalez">
-						  </div>
-						</div>
-						<div class="form-group">
-							<label class="formulario-label" for="exampleInputEmail1">Email</label>
-							<input name="mail" type="text" class="form-control" placeholder="lauragonzalez@correo.com" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-						</div>
-						<div class="form-group">
-							<label class="formulario-label" for="exampleFormControlTextarea1">¿Qué nos querés decir?</label>
-							<textarea class="form-control" placeholder="Escribí acá..." id="exampleFormControlTextarea1" rows="3" name="message"></textarea>
-						</div>
-						<div class="form-group botonera">
-							<button class="btn btn-primary" type="submit" name="submit">ENVIAR</button>
-						</div>
-						<div class="alert alert-success alert-dismissable">
-							<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-									Genial! Ya enviaste tu mensaje. En breve te respondemos.
-								</div>
-				 </form>
-				</fieldset>
+				<?php
+
+if(isset($_POST['submit'])) {
+    $name = $_POST['name'];
+    $surname = $_POST['surname'];
+    $mailFrom = $_POST['mail'];
+    $message = $_POST['message'];
+
+    $mailTo = "juliprinzo@gmail.com";
+    $headers = "From: ".$mailFrom;
+    $txt = "Recibiste un mail de ".$name." ".$surname;
+
+    mail($mailTo, $txt, $message, $headers);
+    //header("Location: contacto.html?mailsend;");
+    echo"<article id='gracias' style='width: 60%;''>
+			<section>
+				<h2 class='titulo-almendra-azul tracking-in-expand'>El mensaje ha sido enviado. Muchas gracias por escribirnos</h2>
+			</section>
+		</article>";
+	} else {
+	echo"<article id='error' style='width: 60%;''>
+			<section>
+				<h2 class='titulo-almendra-azul tracking-in-expand' style='color:red;'>El mensaje no pudo ser enviado</h2>
+			</section>
+		</article>";
+	}
+
+	
+?>
+				
 			</section>
 		</main>
 

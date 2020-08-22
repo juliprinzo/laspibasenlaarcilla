@@ -500,6 +500,10 @@ a:hover {
   width: 100%;
 }
 
+.navbar #basket {
+  width: 10%;
+}
+
 .rosa {
   background-color: #fcdbd7;
 }
@@ -573,8 +577,9 @@ a.nav-link img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -2485,6 +2490,12 @@ footer {
   }
   .navbar {
     position: static;
+    width: 100%;
+  }
+  .navbar #navbarNav {
+    width: 20%;
+  }
+  .navbar #basket {
     width: 100%;
   }
   .fondo-rosa-inicio {

@@ -439,6 +439,9 @@ $subtitulos: "rosa" $rosa , "azul" $azul, "coral" $coral;
 .navbar{
     position: absolute;
     width: 100%;
+    #basket{
+        width: 10%;
+    }
 }
 
 .rosa{
@@ -500,7 +503,7 @@ a.nav-link{
     margin-top: 1%;
     width: 85%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -2105,6 +2108,12 @@ footer {
     .navbar{
         position: static;
         width: 100%;
+        #navbarNav{
+            width: 20%;
+        }
+        #basket{
+            width: 100%;
+        }
     }
 
     .fondo-rosa-inicio {
