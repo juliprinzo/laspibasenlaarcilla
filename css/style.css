@@ -208,6 +208,27 @@ p {
 }
 
 /**********animaciones*******/
+.hvr-grow-1 {
+  display: none;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+}
+
+.hvr-grow-1:hover, .hvr-grow-1:focus, .hvr-grow-1:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
 .tracking-in-expand {
   -webkit-animation: tracking-in-expand 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
   animation: tracking-in-expand 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
@@ -216,6 +237,81 @@ p {
 
 .element-to-hide {
   visibility: hidden;
+}
+
+.heartbeat {
+  -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+  animation: heartbeat 1.5s ease-in-out infinite both;
+}
+
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
 }
 
 @-webkit-keyframes tracking-in-expand {
@@ -500,8 +596,32 @@ a:hover {
   width: 100%;
 }
 
-.navbar #basket {
+.navbar #carrito {
+  position: relative;
   width: 10%;
+  bottom: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navbar #carrito #basket {
+  width: 10%;
+  position: absolute;
+}
+
+.navbar #carrito #contadorBasket {
+  background-color: #eeece8;
+  border-radius: 100%;
+  -webkit-box-shadow: 0px 0px 4px 2px #cacaca;
+          box-shadow: 0px 0px 4px 2px #cacaca;
+  padding: 2px 8px 2px 8px;
+  color: #f69380;
+  font-family: "open-sans", sans-serif;
+  font-weight: bold;
+  position: absolute;
+  left: 30px;
+  top: 50px;
 }
 
 .rosa {
@@ -903,6 +1023,205 @@ a.nav-link img {
 }
 
 /****************ESTILOS-SHOP***************/
+#productosOnCart {
+  height: auto;
+  width: 700px;
+  margin-top: 110px;
+  position: absolute;
+  padding: 0px 40px 40px 40px;
+  z-index: 2;
+  display: none;
+  right: 0;
+  background-color: #eeece8;
+  -webkit-box-shadow: -8px 20px 21px -4px rgba(0, 0, 0, 0.18);
+          box-shadow: -8px 20px 21px -4px rgba(0, 0, 0, 0.18);
+  border-bottom-left-radius: 8px;
+}
+
+#productosOnCart #header-carrito {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#productosOnCart #header-carrito #login-cliente {
+  font-family: "open-sans", sans-serif;
+  font-weight: bold;
+  color: #f69380;
+  border: 2px solid #f69380;
+  padding: 5px 10px 5px 10px;
+  background-color: transparent;
+  border-radius: 25px;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+#productosOnCart #header-carrito #login-cliente:hover {
+  background-color: #f69380;
+  color: #eeece8;
+}
+
+#productosOnCart #header-carrito img {
+  width: 30px;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+#productosOnCart #header-carrito p {
+  font-family: "almendra", serif;
+  font-size: 20px;
+  color: #f69380;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+#productosOnCart #footer-carrito {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#productosOnCart #footer-carrito h3 {
+  padding-top: 20px;
+  font-family: "open-sans", sans-serif;
+  color: #63798a;
+  font-weight: normal;
+}
+
+#productosOnCart #productosSeleccionados article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  margin-bottom: 15px;
+}
+
+#productosOnCart #productosSeleccionados article .carrito-imagenYnombreProducto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+#productosOnCart #productosSeleccionados article .carrito-imagenYnombreProducto img {
+  width: 80px;
+  margin-right: 10px;
+}
+
+#productosOnCart #productosSeleccionados article .carrito-imagenYnombreProducto .nombre-y-artista {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#productosOnCart #productosSeleccionados article .carrito-imagenYnombreProducto .nombre-y-artista .carrito-nombre-producto {
+  color: #63798a;
+  font-family: "almendra", serif;
+  font-size: 25px;
+}
+
+#productosOnCart #productosSeleccionados article .carrito-cantidad {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#productosOnCart #productosSeleccionados article .carrito-cantidad .carrito-minititulo {
+  font-family: "open-sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #948f8d;
+  font-size: 14px;
+  text-align: center;
+}
+
+#productosOnCart #productosSeleccionados article .carrito-cantidad .carrito-cantidad-prod {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#productosOnCart #productosSeleccionados article .carrito-cantidad .carrito-cantidad-prod p {
+  font-family: "open-sans", sans-serif;
+  font-size: 20px;
+}
+
+#productosOnCart #productosSeleccionados article .carrito-cantidad .carrito-cantidad-prod #restar-producto, #productosOnCart #productosSeleccionados article .carrito-cantidad .carrito-cantidad-prod #sumar-producto {
+  border: 2px solid #f69380;
+  color: #f69380;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 30px;
+  margin: 0 8px 0px 8px;
+}
+
+#productosOnCart #productosSeleccionados article .carrito-cantidad .carrito-cantidad-prod #restar-producto:hover, #productosOnCart #productosSeleccionados article .carrito-cantidad .carrito-cantidad-prod #sumar-producto:hover {
+  background-color: #f69380;
+  color: #eeece8;
+}
+
 #main-shop {
   background-color: #eeece8;
   padding: 15%;
@@ -936,7 +1255,7 @@ a.nav-link img {
   padding: 10% 0% 10% 10%;
 }
 
-#main-shop #caja-shop #favoritos {
+#main-shop #caja-shop #favoritos, #main-shop #caja-shop #favoritos-vertodos {
   border: solid 2px #f69380;
   color: #f69380;
   font-family: "open-sans", sans-serif;
@@ -950,11 +1269,11 @@ a.nav-link img {
   margin-bottom: 7%;
 }
 
-#main-shop #caja-shop #favoritos:focus {
+#main-shop #caja-shop #favoritos:focus, #main-shop #caja-shop #favoritos-vertodos:focus {
   outline: none;
 }
 
-#main-shop #caja-shop #favoritos img {
+#main-shop #caja-shop #favoritos img, #main-shop #caja-shop #favoritos-vertodos img {
   margin-right: 5%;
   width: 10%;
 }
@@ -1205,7 +1524,6 @@ a.nav-link img {
 
 #productos article .nombre-like .like {
   position: relative;
-  opacity: 1;
   margin-right: 10%;
 }
 
@@ -1213,24 +1531,14 @@ a.nav-link img {
   width: 25px;
   color: #f69380;
   position: absolute;
-  opacity: 1;
+  display: block;
 }
 
 #productos article .nombre-like .like .icono-like-lleno {
   width: 25px;
   color: #f69380;
   position: absolute;
-  opacity: 0;
-  -webkit-transition: opacity 0.1s ease-in;
-  transition: opacity 0.1s ease-in;
-}
-
-#productos article .nombre-like .like .icono-like-lleno:hover {
-  opacity: 1;
-}
-
-#productos article .nombre-like .like:hover {
-  opacity: 1;
+  display: none;
 }
 
 #productos article hr {
@@ -1277,6 +1585,11 @@ a.nav-link img {
   width: auto;
   font-size: 70%;
   padding: 8px 12px 8px 12px;
+  color: #eeece8;
+}
+
+#productos article .comprar-producto a:hover {
+  color: #f69380;
 }
 
 /****************ESTILOS-TALLERES***************/
@@ -2494,9 +2807,28 @@ footer {
   }
   .navbar #navbarNav {
     width: 20%;
+    margin-top: 20px;
   }
-  .navbar #basket {
-    width: 100%;
+  .navbar .navbar-brand {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 200px;
+  }
+  .navbar #carrito {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .navbar .navbar-toggler {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .navbar .navbar-collapse {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
   }
   .fondo-rosa-inicio {
     -webkit-box-pack: center;
@@ -2932,6 +3264,55 @@ footer {
     width: 100%;
     margin-bottom: 5%;
   }
+  #productosOnCart {
+    height: auto;
+    width: 100%;
+    margin-top: 0px;
+    padding: 0px 10px 10px 10px;
+  }
+  #productosOnCart #login-cliente {
+    display: block;
+  }
+  #productosOnCart #productosSeleccionados article .carrito-imagenYnombreProducto {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    margin-right: 10px;
+  }
+  #productosOnCart #productosSeleccionados article .carrito-imagenYnombreProducto img {
+    width: 70px;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  #productosOnCart #productosSeleccionados article .carrito-imagenYnombreProducto .nombre-y-artista {
+    margin-bottom: 10px;
+  }
+  #productosOnCart #productosSeleccionados article .carrito-imagenYnombreProducto .nombre-y-artista .subtitulo-azul-chico {
+    font-size: 14px;
+  }
+  #productosOnCart #productosSeleccionados article .carrito-imagenYnombreProducto .nombre-y-artista .carrito-nombre-producto {
+    font-size: 20px;
+  }
+  #productosOnCart #productosSeleccionados article .carrito-cantidad p {
+    font-family: "open-sans", sans-serif;
+    font-size: 20px;
+  }
+  #productosOnCart #productosSeleccionados article .carrito-cantidad .carrito-cantidad-prod p {
+    font-family: "open-sans", sans-serif;
+    font-size: 20px;
+  }
+  #productosOnCart #productosSeleccionados article .carrito-cantidad .carrito-cantidad-prod #restar-producto, #productosOnCart #productosSeleccionados article .carrito-cantidad .carrito-cantidad-prod #sumar-producto {
+    border: 2px solid #f69380;
+    color: #f69380;
+    font-weight: bold;
+    padding: 3px 5px;
+  }
   #contacto {
     padding: 10% 8% 10% 8%;
     height: 100%;
@@ -3020,9 +3401,37 @@ footer {
 }
 
 @media only screen and (min-width: 600px) and (max-width: 1024px) {
+  #productosOnCart {
+    margin-top: 0px;
+  }
   .navbar {
     position: static;
     width: 100%;
+  }
+  .navbar #navbarNav {
+    width: 20%;
+    margin-top: 20px;
+  }
+  .navbar .navbar-brand {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 200px;
+  }
+  .navbar #carrito {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .navbar .navbar-toggler {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .navbar .navbar-collapse {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
   }
   .navbar-collapse .navbar-nav {
     width: 100%;
@@ -3396,6 +3805,9 @@ footer {
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1281px) {
+  #productosOnCart {
+    margin-top: 0px;
+  }
   h1 {
     font-size: 45px;
   }
@@ -3587,6 +3999,31 @@ footer {
   .navbar {
     position: static;
     width: 100%;
+  }
+  .navbar #navbarNav {
+    width: 20%;
+    margin-top: 20px;
+  }
+  .navbar .navbar-brand {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 200px;
+  }
+  .navbar #carrito {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .navbar .navbar-toggler {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .navbar .navbar-collapse {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
   }
   .fondo-rosa-inicio {
     -webkit-box-pack: center;

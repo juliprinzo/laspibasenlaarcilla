@@ -1,0 +1,8 @@
+[
+  { "id": 0, "artista": "libre", "uso": "decorativo", "color": "rosa", "precio": 930.00, "nombre": "En el sueño", "imagen": "img/shop/producto1.jpg"},
+  {"id": 1,"artista":"manzanilla","uso": "jardin","color": "blanco","precio": 480.00,"nombre": "Llamas","imagen": "img/shop/producto2.jpg"},
+  {"id": 2,"artista": "azul","uso": "utilitario","color":"celeste","precio": 730.00,"nombre": "Taza lunar","imagen": "img/shop/producto3.jpg"},
+  {"id": 3,"artista":"libre","uso": "jardin","color": "rosa","precio": 810.00,"nombre": "Maceta ballena","imagen": "../img/shop/producto4.jpg"},
+  {"id": 4,"artista":"pino","uso": "utilitario","color":"blanco","precio": 630.00,"nombre": "Taza geométrica","imagen": "img/shop/producto5.jpg"},
+  {"id": 5,"artista":"milonga","uso": "utilitario","color": "blanco","precio": 580.00,"nombre": "Bowl rita","imagen": "img/shop/producto6.jpg"}
+]

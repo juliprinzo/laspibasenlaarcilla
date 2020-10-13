@@ -40,9 +40,26 @@
 					</li>
 				  </ul>
 				</div>
-				<a id="basket"  href=""><img src="img/basket.png" alt=""></a>
+				<div id="carrito">
+					<a id="basket"  href=""><img src="img/basket.png" alt=""></a>
+					<div id="contadorBasket">0</div>
+				</div>
 			</nav>	
 		</header>
+	<!--CARRITO-->
+	<div id="productosOnCart">
+		<div id="header-carrito">
+			<a type="email" class="heartbeat" id="login-cliente">Logueate</a>
+			<img id="closeCarrito" src="img/shop/close-01.svg" alt="">
+		</div>
+		<section id="productosSeleccionados"></section>
+		<hr class="separador-neutro">
+		<article id="footer-carrito">
+			<h3><span id ="carrito-productosTotal">0</span> productos</h3>
+			<h3>Total $</h3>
+		</article>
+	</div>
+
 	<!--CONTENIDO PAGINA-->
 	<main id="main-shop">
 		<section id="caja-shop">
@@ -59,7 +76,7 @@
 					</ul>
 				</article>
 			<!--FAVS-->
-			<a  id="favoritos" class="hvr-grow" tabindex="0" data-container="body" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="¡Este filtro todavia no es funcional! Hay que profundizar en java.">
+			<a id="favoritos" class="favClass hvr-grow">
 				<img src="img/shop/like-lleno.svg" alt="icono-corazon-like">Ver mis favoritos
 			</a>
 			<hr class="separador-neutro">
@@ -69,41 +86,45 @@
 					<div>
 						<a data-toggle="collapse" href="#filtro1" role="button" aria-expanded="true" aria-controls="filtro1">Por artistas</a>
 						<ul class="collapse show" id="filtro1">
-							<li class="badge badge-pill badge-light" tabindex="0" data-container="body" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="¡Este filtro todavia no es funcional! Hay que profundizar en javascript.">Anic</li>
-							<li class="badge badge-pill badge-light" tabindex="0" data-container="body" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="¡Este filtro todavia no es funcional! Hay que profundizar en javascript.">Libre</li>
-							<li class="badge badge-pill badge-light" tabindex="0" data-container="body" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="¡Este filtro todavia no es funcional! Hay que profundizar en javascript.">Pina</li>
-							<li class="badge badge-pill badge-light" tabindex="0" data-container="body" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="¡Este filtro todavia no es funcional! Hay que profundizar en javascript.">Azul Cian</li>
-							<li class="badge badge-pill badge-light" tabindex="0" data-container="body" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="¡Este filtro todavia no es funcional! Hay que profundizar en javascript.">SUD</li>
+							<li class="artista badge badge-pill badge-light" tabindex="0" data-container="body">Libre</li>
+							<li class="artista badge badge-pill badge-light" tabindex="0" data-container="body">Manzanilla</li>
+							<li class="artista badge badge-pill badge-light" tabindex="0" data-container="body">Pino</li>
+							<li class="artista badge badge-pill badge-light" tabindex="0" data-container="body">Azul</li>
+							<li class="artista badge badge-pill badge-light" tabindex="0" data-container="body">Milonga</li>
+							<li id="artista-quitarFiltro" class="badge badge-pill badge-light" tabindex="0" data-container="body">Ver todes</li>
 						</ul>
 					</div>
 					<div>
 						<a data-toggle="collapse" href="#filtro2" role="button" aria-expanded="false" aria-controls="filtro2">Por uso</a>
 						<ul class="collapse" id="filtro2">
-							<li class="badge badge-pill badge-light" tabindex="0" data-container="body" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="¡Este filtro todavia no es funcional! Hay que profundizar en javascript.">Decorativo</li>
-							<li class="badge badge-pill badge-light" tabindex="0" data-container="body" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="¡Este filtro todavia no es funcional! Hay que profundizar en javascript.">Utilitario</li>
-							<li class="badge badge-pill badge-light" tabindex="0" data-container="body" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="¡Este filtro todavia no es funcional! Hay que profundizar en javascript.">Jardin</li>
-							<li class="badge badge-pill badge-light" tabindex="0" data-container="body" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="¡Este filtro todavia no es funcional! Hay que profundizar en javascript.">Colgantes</li>
-							<li class="badge badge-pill badge-light" tabindex="0" data-container="body" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="¡Este filtro todavia no es funcional! Hay que profundizar en javascript.">Infusion</li>
+							<li class="uso badge badge-pill badge-light" tabindex="0" data-container="body">Utilitario</li>
+							<li class="uso badge badge-pill badge-light" tabindex="0" data-container="body">Decorativo</li>
+							<li class="uso badge badge-pill badge-light" tabindex="0" data-container="body">Jardin</li>
+							<li class="uso badge badge-pill badge-light" tabindex="0" data-container="body">Colgantes</li>
+							<li class="uso badge badge-pill badge-light" tabindex="0" data-container="body">Infusion</li>
+							<li id="uso-quitarFiltro" class="badge badge-pill badge-light" tabindex="0" data-container="body">Quitar filtro</li>
 						</ul>
 					</div>
 					<div>
 						<a data-toggle="collapse" href="#filtro3" role="button" aria-expanded="false" aria-controls="filtro3">Por precio</a>
 						<ul class="collapse" id="filtro3">
-							<li class="badge badge-pill badge-light" tabindex="0" data-container="body" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="¡Este filtro todavia no es funcional! Hay que profundizar en javascript.">0$-$250</li>
-							<li class="badge badge-pill badge-light" tabindex="0" data-container="body" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="¡Este filtro todavia no es funcional! Hay que profundizar en javascript.">250$-$600</li>
-							<li class="badge badge-pill badge-light" tabindex="0" data-container="body" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="¡Este filtro todavia no es funcional! Hay que profundizar en javascript.">600$-$900</li>
-							<li class="badge badge-pill badge-light" tabindex="0" data-container="body" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="¡Este filtro todavia no es funcional! Hay que profundizar en javascript.">900$-$1500</li>
-							<li class="badge badge-pill badge-light" tabindex="0" data-container="body" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="¡Este filtro todavia no es funcional! Hay que profundizar en javascript.">$1500-$3000</li>
+							<li id="precio250" class="badge badge-pill badge-light" tabindex="0" data-container="body">0$-$250</li>
+							<li id="precio600" class="badge badge-pill badge-light" tabindex="0" data-container="body">250$-$600</li>
+							<li id="precio900" class="badge badge-pill badge-light" tabindex="0" data-container="body">600$-$900</li>
+							<li id="precio1500" class="badge badge-pill badge-light" tabindex="0" data-container="body">900$-$1500</li>
+							<li id="precioMayor" class="badge badge-pill badge-light" tabindex="0" data-container="body">Mayor a $1500</li>
+							<li class="badge badge-pill badge-light" tabindex="0" data-container="body">Quitar filtro</li>
 						</ul>
 					</div>
 					<div>
 						<a data-toggle="collapse" href="#filtro4" role="button" aria-expanded="false" aria-controls="filtro4">Por color</a>
 						<ul class="collapse" id="filtro4">
-							<li class="badge badge-pill badge-light" tabindex="0" data-container="body" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="¡Este filtro todavia no es funcional! Hay que profundizar en java."><span class="dot-rosa"></span>Rosa</li>
-							<li class="badge badge-pill badge-light" tabindex="0" data-container="body" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="¡Este filtro todavia no es funcional! Hay que profundizar en java."><span class="dot-coral"></span>Coral</li>
-							<li class="badge badge-pill badge-light" tabindex="0" data-container="body" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="¡Este filtro todavia no es funcional! Hay que profundizar en java."><span class="dot-celeste"></span>Celeste</li>
-							<li class="badge badge-pill badge-light" tabindex="0" data-container="body" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="¡Este filtro todavia no es funcional! Hay que profundizar en java."><span class="dot-negro"></span>Negro</li>
-							<li class="badge badge-pill badge-light" tabindex="0" data-container="body" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="¡Este filtro todavia no es funcional! Hay que profundizar en java."><span class="dot-blanco"></span>Blanco</li>
+							<li class="color badge badge-pill badge-light" tabindex="0" data-container="body"><span class="dot-rosa"></span>Rosa</li>
+							<li class="color badge badge-pill badge-light" tabindex="0" data-container="body"><span class="dot-coral"></span>Coral</li>
+							<li class="color badge badge-pill badge-light" tabindex="0" data-container="body"><span class="dot-celeste"></span>Celeste</li>
+							<li class="color badge badge-pill badge-light" tabindex="0" data-container="body"><span class="dot-negro"></span>Negro</li>
+							<li class="color badge badge-pill badge-light" tabindex="0" data-container="body"><span class="dot-blanco"></span>Blanco</li>
+							<li class="badge badge-pill badge-light" tabindex="0" data-container="body">Ver todos</li>
 						</ul>
 					</div>
 				</article>
@@ -111,123 +132,7 @@
 		</section>
 		<!--PRODUCTOS-->
 		<section id="productos">
-			<article class="scale-in-center">
-				<img src="img/shop/producto1.jpg" alt="foto producto florero con cara triste en rosa y negro">
-				<div class="nombre-like">
-					<div>
-						<h2 class="h2-almendra-azul">En el sueño</h2>
-						<p class="subtitulo-azul-chico"> por Libre</p>
-					</div>
-					<div class="like">
-						<img class="icono-like" src="img/shop/like.svg" alt="like">
-						<img class="icono-like-lleno" src="img/shop/like-lleno.svg" alt="like">
-					</div>
-				</div>
-				<hr class="separador-coral">
-				<div class="comprar-producto">
-					<p>$789</p>
-					<a class="boton-coral" href="https://verdecactus.mitiendanube.com/productos/maceta-casa-simple/?variant=26927091" target="_blank">Lo quiero</a>
-				</div>
-			</article>
-			<!--PRODUCTO-2-->
-			<article class="scale-in-center">
-				<img src="img/shop/producto2.jpg" alt="foto producto llamas en rosa y blanco hechas a mano terminacion rustica">
-				<div class="nombre-like">
-					<div>
-						<h2 class="h2-almendra-azul">Llamas</h2>
-						<p class="subtitulo-azul-chico"> por Airam</p>
-					</div>
-					<div class="like">
-						<img class="icono-like" src="img/shop/like.svg" alt="like">
-						<img class="icono-like-lleno" src="img/shop/like-lleno.svg" alt="like">
-					</div>
-				</div>
-				<hr class="separador-coral">
-				<div class="comprar-producto">
-					<p>$480</p>
-					<p class="por-unidad">por unidad</p>
-					<a class="boton-coral" href="https://verdecactus.mitiendanube.com/productos/maceta-casa-simple/?variant=26927091" target="_blank">Lo quiero</a>
-				</div>
-			</article>
-			<!--PRODUCTO-3-->
-			<article class="scale-in-center">
-				<img src="img/shop/producto3.jpg" alt="foto-producto de tazas celestes con los ciclos lunares ilustrados">
-				<div class="nombre-like">
-					<div>
-						<h2 class="h2-almendra-azul">Taza lunar</h2>
-						<p class="subtitulo-azul-chico"> por Pina</p>
-					</div>
-					<div class="like">
-						<img class="icono-like" src="img/shop/like.svg" alt="like">
-						<img class="icono-like-lleno" src="img/shop/like-lleno.svg" alt="like">
-					</div>
-				</div>
-				<hr class="separador-coral">
-				<div class="comprar-producto">
-					<p>$480</p>
-					<p class="por-unidad">por unidad</p>
-					<a class="boton-coral" href="https://verdecactus.mitiendanube.com/productos/maceta-casa-simple/?variant=26927091" target="_blank">Lo quiero</a>
-				</div>
-			</article>
-			<!--PRODUCTO-4-->
-			<article class="scale-in-center">
-				<img src="img/shop/producto4.jpg" alt="foto-producto de ballena porta maceta en rosa claro y blanco infantil">
-				<div class="nombre-like">
-					<div>
-						<h2 class="h2-almendra-azul">Maceta ballena</h2>
-						<p class="subtitulo-azul-chico"> por Paula Jota</p>
-					</div>
-					<div class="like">
-						<img class="icono-like" src="img/shop/like.svg" alt="like">
-						<img class="icono-like-lleno" src="img/shop/like-lleno.svg" alt="like">
-					</div>
-				</div>
-				<hr class="separador-coral">
-				<div class="comprar-producto">
-					<p>$390</p>
-					<a class="boton-coral" href="https://verdecactus.mitiendanube.com/productos/maceta-casa-simple/?variant=26927091" target="_blank">Lo quiero</a>
-				</div>
-			</article>
-			<!--PRODUCTO-5-->
-			<article class="scale-in-center">
-				<img src="img/shop/producto5.jpg" alt="foto-producto de tazas blancas con formas geometricas pintadas en colores">
-				<div class="nombre-like">
-					<div>
-						<h2 class="h2-almendra-azul">Taza geometrica</h2>
-						<p class="subtitulo-azul-chico"> por minipin</p>
-					</div>
-					<div class="like">
-						<img class="icono-like" src="img/shop/like.svg" alt="like">
-						<img class="icono-like-lleno" src="img/shop/like-lleno.svg" alt="like">
-					</div>
-				</div>
-				<hr class="separador-coral">
-				<div class="comprar-producto">
-					<p>$430</p>
-					<p class="por-unidad">por unidad</p>
-					<a class="boton-coral" href="https://verdecactus.mitiendanube.com/productos/maceta-casa-simple/?variant=26927091" target="_blank">Lo quiero</a>
-				</div>
-			</article>
-			<!--PRODUCTO-6-->
-			<article class="scale-in-center">
-				<img src="img/shop/producto6.jpg" alt="foto-producto de bowls  con dibujos en colores celeste rosado coral rojo y azul en formas geometricas, pinceladas, lineas y circulos">
-				<div class="nombre-like">
-					<div>
-						<h2 class="h2-almendra-azul">Bowl decorativo</h2>
-						<p class="subtitulo-azul-chico"> por Milonga</p>
-					</div>
-					<div class="like">
-						<img class="icono-like" src="img/shop/like.svg" alt="like">
-						<img class="icono-like-lleno" src="img/shop/like-lleno.svg" alt="like">
-					</div>
-				</div>
-				<hr class="separador-coral">
-				<div class="comprar-producto">
-					<p class="precio-producto">$580</p>
-					<p class="por-unidad">por unidad</p>
-					<a class="boton-coral" href="https://verdecactus.mitiendanube.com/productos/maceta-casa-simple/?variant=26927091" target="_blank">Lo quiero</a>
-				</div>
-			</article>
+
 		</section>
 	</main>
 		<!--FOOTER-->
@@ -269,7 +174,8 @@
 		<!--FIN-FOOTER-->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<script src="js/javascript.js"></script>
+	<script defer src="js/javascript.js"></script>
 	</body>
 </html>

@@ -182,6 +182,23 @@ $subtitulos: "rosa" $rosa , "azul" $azul, "coral" $coral;
 
  /**********animaciones*******/
 
+ .hvr-grow-1 {
+    display: none;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+  .hvr-grow-1:hover, .hvr-grow-1:focus, .hvr-grow-1:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+
  .tracking-in-expand {
 	-webkit-animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
             animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
@@ -191,6 +208,82 @@ $subtitulos: "rosa" $rosa , "azul" $azul, "coral" $coral;
 .element-to-hide{
     visibility:hidden; 
 } 
+
+.heartbeat {
+	-webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+	        animation: heartbeat 1.5s ease-in-out infinite both;
+}
+
+ @-webkit-keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  @keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  
+
 
 @-webkit-keyframes tracking-in-expand {
 	0% {
@@ -439,8 +532,28 @@ $subtitulos: "rosa" $rosa , "azul" $azul, "coral" $coral;
 .navbar{
     position: absolute;
     width: 100%;
-    #basket{
+    #carrito{
+        position: relative;
         width: 10%;
+        bottom:30px;
+        justify-content: center;
+        #basket{
+            width: 10%;
+            position: absolute;
+        }
+        #contadorBasket{
+            background-color: $neutro;
+            border-radius: 100%;
+            box-shadow: 0px 0px 4px 2px #cacaca;
+            padding: 2px 8px 2px 8px;
+            color: $coral;
+            font-family: $open;
+            font-weight: bold;
+            position: absolute;
+            left: 30px;
+            top: 50px;
+ 
+        }
     }
 }
 
@@ -785,6 +898,130 @@ a.nav-link{
  /****************ESTILOS-SHOP***************/
 
 
+#productosOnCart{
+    height: auto;
+    width: 700px;
+    margin-top: 110px;
+    position: absolute;
+    padding: 0px 40px 40px 40px;
+    z-index: 2;
+    display: none;
+    right:0;
+    background-color: $neutro;
+    box-shadow: -8px 20px 21px -4px rgba(0,0,0,0.18);
+    border-bottom-left-radius: 8px;
+    #header-carrito{
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        #login-cliente{
+            font-family: $open;
+            font-weight: bold;
+            color: $coral;
+            border: 2px solid $coral;
+            padding: 5px 10px 5px 10px;
+            background-color: transparent;
+            border-radius: 25px;
+            order:1;
+            &:hover{
+                background-color: $coral;
+                color: $neutro;
+            }
+        }
+        img{
+            width: 30px;
+            order:2;
+        }
+        p{
+            font-family: $almendra;
+            font-size: 20px;
+            color: $coral;
+            order:1;
+        }
+    }  
+    #footer-carrito{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        h3{
+            padding-top: 20px;
+            font-family: $open;
+            color: $azul;
+            font-weight: normal;
+        }
+    };
+    #productosSeleccionados{
+        article{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            margin-bottom: 15px;
+            .carrito-imagenYnombreProducto{
+                display: flex;
+                flex-flow: row wrap;
+                align-content: center;
+                img{
+                    width: 80px;
+                    margin-right: 10px;
+                }
+                .nombre-y-artista{
+                    display: flex;
+                    flex-flow: column wrap;
+                    justify-content: center;
+                    .carrito-nombre-producto{
+                        color: $azul;
+                        font-family: $almendra;
+                        font-size: 25px;
+                    }
+                }
+            }
+            .carrito-cantidad{
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+                .carrito-minititulo{
+                    font-family: $open;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    color: $gris;
+                    font-size: 14px;
+                    text-align: center;
+                }
+                .carrito-cantidad-prod{
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    p{
+                        font-family: $open;
+                        font-size: 20px;
+                    }
+                    #restar-producto, #sumar-producto{
+                        border: 2px solid $coral;
+                        color: $coral;
+                        font-weight: bold;
+                        padding: 5px 10px;
+                        border-radius: 30px;
+                        margin: 0 8px 0px 8px;
+                        &:hover{
+                            background-color: $coral;
+                            color: $neutro;
+                        }
+                    }
+                }
+            }
+        }
+    }
+   
+}
+
+
  #main-shop{
  	background-color: $neutro;
  	padding: 15%;
@@ -805,7 +1042,7 @@ a.nav-link{
             background-color: $coral;
             padding: 10% 0% 10% 10%;
         }
-        #favoritos{
+        #favoritos, #favoritos-vertodos{
             border: solid 2px $coral;
             color: $coral;
             font-family: $open;
@@ -1001,28 +1238,20 @@ a.nav-link{
                 padding-top: 0;
             }
             .like{
-                position: relative;
-                opacity: 1;
+                position: relative; 
                 margin-right:10% ;
                 .icono-like{
                     width: 25px;
                     color: $coral;
                     position: absolute;
-                    opacity: 1;
+                    display: block;
                     }
                 
                 .icono-like-lleno{
                     width: 25px;
                     color: $coral;
                     position: absolute;
-                    opacity: 0;
-                    transition: opacity 0.1s ease-in;
-                    &:hover{
-                        opacity: 1;
-                        }
-                    }
-                &:hover{
-                    opacity: 1;
+                    display: none;
                     }
                 }
         }
@@ -1057,7 +1286,12 @@ a.nav-link{
                 width: auto;
                 font-size: 70%;
                 padding: 8px 12px 8px 12px;
+                color: $neutro;
+                &:hover{
+                    color: $coral;
+                }
             }
+            
         }
 
     }
@@ -2090,6 +2324,7 @@ footer {
 
 
   @media only screen and (max-width: 600px){
+    
     h1{
         font-size: ($font-size)-15px; 
     }
@@ -2110,9 +2345,21 @@ footer {
         width: 100%;
         #navbarNav{
             width: 20%;
+            margin-top: 20px;
         }
-        #basket{
-            width: 100%;
+        .navbar-brand{
+            order:1;
+            width: 200px;
+        }
+
+        #carrito{
+            order:2;
+        }
+        .navbar-toggler{
+            order:3;
+        }
+        .navbar-collapse {
+            order: 3;
         }
     }
 
@@ -2500,6 +2747,7 @@ footer {
            }
        }
     } 
+
     #productos{
         width: 100%;
         article{
@@ -2508,6 +2756,60 @@ footer {
             margin-bottom: 5%;
         }
     }
+
+    #productosOnCart{
+        height: auto;
+        width: 100%;
+        margin-top: 0px;
+        padding: 0px 10px 10px 10px;
+        #login-cliente{
+            display: block;
+        }
+        #productosSeleccionados{
+            article{
+                .carrito-imagenYnombreProducto{
+                    display: flex;
+                    flex-flow: column wrap;
+                    align-content: center;
+                    margin-right: 10px;
+                    img{
+                        width: 70px;
+                        margin-right: 0px;
+                        margin-left: 0px;
+                    }
+                    .nombre-y-artista{
+                        margin-bottom: 10px;
+                        .subtitulo-azul-chico{
+                            font-size: 14px;
+                        }
+                        .carrito-nombre-producto{
+                            font-size: 20px;
+                        }
+                    }
+                }
+                .carrito-cantidad{
+                    p{
+                        font-family: $open;
+                        font-size: 20px;
+                    }
+                    .carrito-cantidad-prod{
+                        p{
+                            font-family: $open;
+                            font-size: 20px;
+                        }
+                        #restar-producto, #sumar-producto{
+                            border: 2px solid $coral;
+                            color: $coral;
+                            font-weight: bold;
+                            padding: 3px 5px;
+                        }
+                    }
+                }
+            }
+        }
+       
+    }
+    
 
     #contacto{
         padding: 10% 8% 10% 8%;
@@ -2596,9 +2898,31 @@ footer {
 }
 
 @media only screen and (min-width:600px) and (max-width:1024px){
+    #productosOnCart{
+        margin-top: 0px;
+    }
+    
     .navbar{
         position: static;
         width: 100%;
+        #navbarNav{
+            width: 20%;
+            margin-top: 20px;
+        }
+        .navbar-brand{
+            order:1;
+            width: 200px;
+        }
+
+        #carrito{
+            order:2;
+        }
+        .navbar-toggler{
+            order:3;
+        }
+        .navbar-collapse {
+            order: 3;
+        }
     }
 
     .navbar-collapse .navbar-nav {
@@ -2960,6 +3284,10 @@ footer {
 
 @media only screen and (min-width:1024px) and (max-width:1281px){
    
+    #productosOnCart{
+        margin-top: 0px;
+    }
+
     h1{
         font-size: ($font-size)-5px; 
     }
@@ -3170,6 +3498,24 @@ footer {
     .navbar{
         position: static;
         width: 100%;
+        #navbarNav{
+            width: 20%;
+            margin-top: 20px;
+        }
+        .navbar-brand{
+            order:1;
+            width: 200px;
+        }
+
+        #carrito{
+            order:2;
+        }
+        .navbar-toggler{
+            order:3;
+        }
+        .navbar-collapse {
+            order: 3;
+        }
     }
 
     .fondo-rosa-inicio {

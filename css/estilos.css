@@ -813,12 +813,12 @@ p{
 	margin-right:10% ;
 }
 
-.icono-like{
+/* .icono-like{
 	width: 25px;
 	color: #f69380;
 	position: absolute;
 	opacity: 1;
-}
+} */
 
 .icono-like-lleno{
 	width: 25px;
@@ -828,7 +828,7 @@ p{
 	transition: opacity 0.1s ease-in;
 }
 
-.like:hover .icono-like-lleno{
+.like:hover, .like:focus .icono-like-lleno{
 	opacity: 1;
 }
 
